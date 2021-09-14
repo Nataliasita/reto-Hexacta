@@ -1,0 +1,21 @@
+.container{
+  height: 180vh;
+  width: 100vw;
+  background: #FFFFFF;
+  display: flex;
+}
+.imagen1{
+    width: 46vw;
+    height: 60vh;
+    margin-left: 0;
+    position: absolute;
+    top:30vh;
+    background-size: cover;
+}
+.lectura{
+    width: 46vw;
+    height: 60vh;
+    margin-left: 0;
+    position: absolute;
+    top:92vh;
+}
