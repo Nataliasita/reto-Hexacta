@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import MyHeader from './header'
 import Form from './formNewProduct'
 import '../estilos/home.css'
@@ -28,7 +28,7 @@ export function Catalogo() {
 }
 
 
-export function formulario(){
+export function Formula(){
 
 
   const [showProductForm, setShowProductForm]= useState(true)
