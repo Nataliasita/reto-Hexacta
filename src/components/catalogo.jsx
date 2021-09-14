@@ -1,22 +1,26 @@
-import React, { useState } from 'react'
-import Form from '../components/formNewProduct.jsx'
-// import Form from '../components/form.jsx'
+import React from 'react'
+import MyHeader from './header'
+import { Footer } from './footer'
+import '../estilos/home.css'
+import '../estilos/footer.css'
+import '../estilos/header.css'
+import '../estilos/catalogo.css'
+import {Cards} from './cards'
 
 export function Catalogo() {
+  return (
+    <div className="contain_catalogo">
+      <MyHeader/>
+        <form action="">
+             <input className="buscar" placeholder="Buscar producto" type="text"/>
+             
+        </form>
+              <button className="button_buscar" type="submit">Buscar</button>
 
-    const [showProductForm, setShowProductForm]= useState(true)
-
-    return (
-        <div>
-            <label htmlFor="">¿No encuentras lo que buscas?</label>
-            <button 
-                type='button'
-                onClick={() => setShowProductForm(!showProductForm)}
-                >Agregar Producto
-            </button>
-            
-            {showProductForm && <Form></Form> }
-            
-        </div>
-    )
+             <div className="products">
+              <Cards></Cards>
+             </div>
+      <Footer></Footer>
+    </div>
+  )
 }
