@@ -1,0 +1,33 @@
+//import logo from './logo.svg';
+import React from "react";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import './App.css';
+import { Home } from'./components/home';
+import { Catalogo} from './components/catalogo';
+import { Carrito} from './components/carrito';
+
+function App() {
+  return (
+    <Router>
+      <div className="router-container">
+        <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/catalogo" exact>
+            <Catalogo/>
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/Carrito" exact>
+            <Carrito/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+export default App;

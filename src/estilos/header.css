@@ -12,6 +12,12 @@
     padding-left: 71vw;
     font-size: 1.5em;
     cursor: pointer;
+    text-decoration: none !important;
+}
+a{
+    list-style: none;
+    text-decoration: none !important;
+    color: #FFFFFF;
 }
 .main1{
     right: 2vw;
@@ -19,6 +25,6 @@
 .logoH{
     height: 16vh;
     position: absolute;
-    margin-top: 8.5vh;
+    margin-top: 7.8vh;
     margin-left: 3vw;
 }
