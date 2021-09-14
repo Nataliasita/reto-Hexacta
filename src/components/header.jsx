@@ -1,11 +1,12 @@
 import React from 'react'
-import logo from '../images/logo.jpg'
+import logo from '../images/log.jpg'
 import {Link} from 'react-router-dom'
 
 export function Header() {
     return (
         <header className="header">
             <img src={logo} className="logoH" alt="" />
+            <p className="nameH" >Points Team Hexacta</p>
 
             <nav className="main">
                 <Link to="/" exact>

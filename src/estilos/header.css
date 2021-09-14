@@ -1,14 +1,14 @@
 .header{
-    height: 30vh;
+    height: 27vh;
     width: 100vw;
-    background-color: #2A4494;
+    background-color: #1d316b;
     color: #FFFFFF;
 }
 .main{
     height: 12vh;
     width: 100vw;
     display: flex;
-    margin-top:18vh;
+    margin-top:14.3vh;
     padding-left: 71vw;
     font-size: 1.5em;
     cursor: pointer;
@@ -23,8 +23,15 @@ a{
     right: 2vw;
 }
 .logoH{
-    height: 16vh;
+    height: 10vh;
     position: absolute;
-    margin-top: 7.8vh;
+    margin-top: 6vh;
     margin-left: 3vw;
+    border-radius: 1000px;
+}
+.nameH{
+    position: absolute;
+    margin: 9vh 0 0 9vw;
+    font-size: 1.5em;
+
 }

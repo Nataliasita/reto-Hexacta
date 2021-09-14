@@ -3,6 +3,7 @@
   width: 100vw;
   background: #FFFFFF;
   display: flex;
+  overflow-x: hidden;
 }
 .imagen1{
     width: 46vw;
@@ -11,11 +12,134 @@
     position: absolute;
     top:30vh;
     background-size: cover;
+    display: none;
 }
 .lectura{
-    width: 46vw;
-    height: 60vh;
-    margin-left: 0;
+    width: 21vw;
+    height: 45vh;
+    display: flex;
+    right: 12vw;
     position: absolute;
-    top:92vh;
+    top:101vh;
+    border-radius: 1000px;
+    z-index: 5;
+    transform: rotate(-5deg);
+    box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.lectura:hover{
+  cursor: pointer;
+  top:99vh;
+  right: 11vw;
+}
+.vd1{
+  height: 60vh;
+  position: absolute;
+  width:50vw;
+  top:27vh;
+  margin-left: -0.7vw;
+  z-index: 3;
+  left: 0;
+  border-bottom-right-radius:150px;
+}
+.container::after{
+  content:"";
+  position:absolute;
+  color: #FFFFFF;
+  font-size: 1.5em;
+  top:27vh;
+  left:0;
+  width:48.6vw;
+  height:60vh;
+  margin-left: 0;
+  text-align:right;
+  right: 2vw;
+  background:rgba(0, 0, 0, 0.164);
+  z-index:4;
+  border-bottom-right-radius:150px;
+  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.bolso1{
+  position:absolute;
+  top: 101vh;
+  height: 45vh;
+  left: 17vw;
+  width: 21vw;
+  border-radius: 1000px;
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.bolso1:hover{
+  cursor: pointer;
+  left: 18vw;
+  top: 99vh;
+
+}
+.title1{
+  position: absolute;
+  color: #ffffff;
+  top:50vh;
+  left: 2vw;
+  z-index: 6;
+  font-size: 1.5em;
+}
+.title2{
+  position: absolute;
+  color: #ffffff;
+  top:135vh;
+  right: 14vw;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_red.jpg);
+  text-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.title3{
+  position: absolute;
+  color: #ffffff;
+  left: 19vw;
+  top:135vh;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_main.jpg);
+  background-size: contain;
+  text-align: center;
+  vertical-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.redes{
+  position:absolute;
+  z-index: 7;
+  height: 8vh;
+  width: 25vw;
+  top: 153.5vh;
+  left: 39vw;
+  padding: 0 3vw 0 2vw;
+  flex-direction: row;
+  
+}
+.group{
+  position: absolute;
+  height: 8vh;
+  right: 3vw;
+  top:1.5vh;
+  filter: grayscale();
+}
+.title4{
+  position: absolute;
+  left: 1vw;
+  color: rgb(46, 46, 46);
+  font-size: 1.1em;
+}
+.log{
+  padding: 0 0.5vw 0 0.5vw;
+  opacity: 0.7;
+}
+.log:hover{
+  cursor: pointer;
 }
