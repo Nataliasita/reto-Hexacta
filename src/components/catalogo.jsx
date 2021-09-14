@@ -30,6 +30,7 @@ export function Catalogo() {
 
 export function formulario(){
 
+
   const [showProductForm, setShowProductForm]= useState(true)
 
     return (
