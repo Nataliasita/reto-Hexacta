@@ -1,17 +1,23 @@
 .contain_catalogo{
-  height: 200vh;
+  height: 220vh;
   width: 100vw;
   background: #FFFFFF;
   display: flex;
   overflow-x: hidden;
 }
 .products{
-    height: 120vh;
+    height: 175vh;
     width: 80vw;
     top:40vh;
     left:20vw;
     background: #9e9e9e;
     position: absolute;
+}
+.lupa1{
+    height: 4vh;
+    position: absolute;
+    top:31.5vh;
+    left: 29.5vw;
 }
 .buscar{
     height: 5vh;
