@@ -18,6 +18,13 @@
     border-top-right-radius:10px;
     border-top-left-radius:10px;
 }
+.category_producto{
+    background: rgb(4, 0, 255);
+    width: 18vw;
+    height: 4vh;
+    margin: 0;
+    z-index: 5;
+}
 .card_title{
     background: chartreuse;
     width: 18vw;

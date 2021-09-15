@@ -6,7 +6,10 @@ import { Home } from'./components/home';
 import { Catalogo} from './components/catalogo';
 import { Carrito} from './components/carrito';
 
+
 function App() {
+
+  
   return (
     <Router>
       <div className="router-container">
