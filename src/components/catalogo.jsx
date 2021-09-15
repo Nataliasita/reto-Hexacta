@@ -21,8 +21,44 @@ export function Catalogo() {
 
              <div className="products">
               <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
+              <Cards></Cards>
              </div>
             
+              <div className="filtro">
+              <p className="title_filtro"> Filtrar Categoria</p>
+
+               <form  action="">
+                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="1"/> Accesorios</label> 
+                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="2"/> Celulares</label>
+                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="3"/> Deportes</label>
+                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="4"/> Mascotas</label>
+                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="5"/> Tecnologia</label>
+                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="6"/> Viajes</label>
+                  </form>
+
+              </div>
+
+
     </div>
   )
 }
@@ -35,7 +71,7 @@ export function Formula(){
 
     return (
         <div>
-            <label htmlFor="">¿No encuentras lo que buscas?</label>
+            <label htmlFor="">¿No encuentraslo que buscas?</label>
             <button 
                 type='button'
                 onClick={() => setShowProductForm(!showProductForm)}

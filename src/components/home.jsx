@@ -20,7 +20,7 @@ export function Home() {
             <video className="vd1" autoplay="1" loop="1" muted preload="auto">
              <source src={video_d } type="video/mp4" />
             </video>
-                     <p className="title1">Diversion</p>
+                     <p className="title1">Viajes</p>
                 
                 <img src={mascota} className="lectura" alt="" />
                      <p className="title2">Mascotas</p>

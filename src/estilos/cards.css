@@ -2,63 +2,55 @@
     background-color: rgb(248, 248, 248);
     width: 18vw;
     height: 58vh;
-    display: flex;
-    position: absolute;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    padding: 1vw;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
+    margin-left: 0.5vw;
 }
 .image_card{
+    margin-top:0;
     width: 18vw;
     height: 31vh;
-    position: absolute;
-    top: 0;
-    left: 0;
     background-color: rgb(0, 139, 53);
+    display: flex;
+    margin: 0;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
 }
 .card_title{
     background: chartreuse;
-    top:28vh;
     width: 18vw;
     height: 4vh;
-    left: 0;
-    position: absolute;
+    margin: 0;
 }
 .card_description{
     background: rgb(0, 195, 255);
-    top:33vh;
+    margin: 0;
     width: 18vw;
     height: 4vh;
-    position: absolute;
-    left: 0;
+  
 }
 .card_points_value{
     background: rgb(140, 0, 255);
-    top:38vh;
+    margin: 1vh 0  0.5vh 0;
     width: 18vw;
     height: 5vh;
-    position: absolute;
     left: 0;
 }
 .card_details{
-    top:46.5vh;
+    margin: 2vh 0 0 0;
     width: 16vw;
-    height: 5vh;
-    position: absolute;
+    height: 6vh;
     background: #ad0000;
     color: #FFFFFF;
     left: 1vw;
+    font-size: 1em;
 
 }
 .card_send_cart{
-    top:52vh;
     width: 16vw;
     height: 5vh;
-    position: absolute;
-    border:#ad0000 1px solid ;
     color: #ad0000;
-    left: 1vw;
+    margin: 2vh 0 0 0;
 }
