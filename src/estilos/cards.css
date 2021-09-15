@@ -42,7 +42,7 @@
     margin: 2vh 0 0 0;
     width: 16vw;
     height: 6vh;
-    background: #ad0000;
+    background: #c50000;
     color: #FFFFFF;
     left: 1vw;
     font-size: 1em;
@@ -51,6 +51,6 @@
 .card_send_cart{
     width: 16vw;
     height: 5vh;
-    color: #ad0000;
+    color: #c50000;
     margin: 2vh 0 0 0;
 }

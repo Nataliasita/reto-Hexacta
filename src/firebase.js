@@ -1,6 +1,6 @@
-import firebase from "firebase/app";
+import firebase from 'firebase/app';
 
-const config = {
+const firebaseConfig = {
   apiKey: "AIzaSyCEmoZz0c1F8mSNjSLp6AWqLZivtm9aqaY",
   authDomain: "reto-hexacta.firebaseapp.com",
   databaseURL: "https://reto-hexacta-default-rtdb.firebaseio.com",
@@ -11,5 +11,6 @@ const config = {
 };
 
 
-const firebaseConfig = firebase.initializeApp(config);
-export default firebaseConfig
+const  fb = firebase.initializeApp(firebaseConfig);
+
+export const db = fb.firestore();

@@ -37,7 +37,7 @@
 }
 
 .products::-webkit-scrollbar-thumb {
-    background-color: #b82500e5 ;
+    background-color: #990000;
     border-radius: 20px;
 }
 .products::-webkit-scrollbar-track {
@@ -56,7 +56,7 @@
     top:31vh;
     left: 32vw;
     outline-width: 0;
-    border-bottom: 1.5px solid #ad0000;
+    border-bottom: 1.5px solid #c50000;
     border-right: none;
     border-top: none;
     border-left:none;
@@ -82,7 +82,7 @@
 }
 .button_buscar:hover{
     cursor: pointer;
-    background:#c50000c7;
+    background:#c50000;
     color: #FFFFFF;
 }
 .filtro{
