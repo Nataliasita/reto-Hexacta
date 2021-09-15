@@ -10,17 +10,15 @@ import {Cards} from './cards'
 export function Catalogo() {
   return (
     <div className="contain_catalogo">
-      <MyHeader/>
-        <form action="">
-             <input className="buscar" placeholder="Buscar producto" type="text"/>
-             
-        </form>
-              <button className="button_buscar" type="submit">Buscar</button>
-
-             <div className="products">
-              <Cards></Cards>
-             </div>
-      <Footer></Footer>
+        <MyHeader/>
+            <form action="">
+                <input className="buscar" placeholder="Buscar producto" type="text"/>
+            </form>
+                <button className="button_buscar" type="submit">Buscar</button>
+                <div className="products">
+                    <Cards></Cards>
+                </div>
+        <Footer></Footer>
     </div>
   )
 }
