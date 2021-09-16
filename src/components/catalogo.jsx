@@ -15,18 +15,25 @@ function searchingTerm(term){
   return function(x){ 
     return x.title.toLowerCase().includes(term) || !term;
    }
+}
 
- }
+  // const searchHandler = (searchTerm) => {
+  //   setSearchTerm(searchTerm);
+  //   if (searchTerm !== "") {
+  //     const newProductList = productos.filter((producto) => {
+  //       return Object.values(producto)
+  //         .join(" ")
+  //         .toLowerCase()
+  //         .includes(searchTerm.toLowerCase());
+  //     });
+  //     setSearchResults(newProductList);
+  //   } else {
+  //     setSearchResults(productos);
+  //   }
+  // };
 
 
 export function Catalogo() {
-
-  // async function getCities(db) {
-  //   const citiesCol = collection(db, 'cities');
-  //   const citySnapshot = await getDocs(citiesCol);
-  //   const cityList = citySnapshot.docs.map(doc => doc.data());
-  //   return cityList;
-  // }
 
   const [productos, setProductos] = useState([]);
   const [term, setTerm] = React.useState('');
@@ -42,7 +49,7 @@ export function Catalogo() {
         setProductos(data)
       })
   },[]);
-
+ 
   return (
     <div className="contain_catalogo">
       <MyHeader/>
