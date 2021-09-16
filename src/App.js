@@ -5,8 +5,12 @@ import './App.css';
 import { Home } from'./components/home';
 import { Catalogo} from './components/catalogo';
 import { Carrito} from './components/carrito';
+//import { ButtonModal } from './components/buttonModal';
+
 
 function App() {
+
+  
   return (
     <Router>
       <div className="router-container">

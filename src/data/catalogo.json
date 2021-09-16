@@ -1,0 +1,172 @@
+[
+    {    
+    "title": "PlayStation 4",
+    "description": "PS4 Pro 4K TV GAMING & MORE The most advanced PlayStation system ever. PS4 Pro is designed to take your favorite PS4 games and add to them with more power for graphics",
+    "warehouseAvailability": "In Stock.",
+    "points": 3000,
+    "imageUrlList": [
+       "https://images-na.ssl-images-amazon.com/images/I/71itkDwgyyL._SL1500_.jpg"
+
+   ],
+    "categories": [
+       "Videojuegos",
+       "PlayStation 4",
+      "Consolas"
+  ]
+    },
+{    
+    "title": "Nintendo Switch",
+    "description": "Nintendo Switch with Neon Blue and Neon Red",
+    "warehouseAvailability": "In Stock.",
+    "points": 2500,
+    "imageUrlList": [
+       "https://images-na.ssl-images-amazon.com/images/I/71itkDwgyyL._SL1500_.jpg"
+
+   ],
+    "categories": [
+       "Videojuegos",
+       "Nintendo Switch",
+      "Consolas"
+  ]
+},
+{    
+    "title": "MacBook Pro",
+    "description": "MacBook Pro MF839LL/A 13.3 pulgadas, Intel Core i5 2.7 GHz, 8GB Ram, 128GB SSD",
+    "warehouseAvailability": "In Stock.",
+    "points": 5000,
+    "imageUrlList": [
+       "https://images-na.ssl-images-amazon.com/images/I/71itkDwgyyL._SL1500_.jpg"
+    ],
+    "categories": [
+       "Tecnología",
+       "MacbookPro",
+      "Laptops"
+  ]
+},
+{    
+    "title": "Iphone",
+    "description": "Iphone 12 128GB ",
+    "warehouseAvailability": "In Stock.",
+    "points": 2500,
+    "imageUrlList": [
+       "https://images.unsplash.com/photo-1607936854279-55e8a4c64888?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ramal-wickramasinghe-OjMyiwfviQ4-unsplash.jpg&w=640"],
+    "categories": [
+       "Tecnología",
+       "Iphone",
+      "Celulares"
+  ]
+},
+{    
+    "title": "Samsung Galaxi",
+    "description": "Samsung Galaxi S21",
+    "warehouseAvailability": "In Stock.",
+    "points": 2300,
+    "imageUrlList": [
+       "https://images.unsplash.com/photo-1583573636246-18cb2246697f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniel-romero-bR_r3fJu-vk-unsplash.jpg&w=640"
+    ],
+    "categories": [
+       "Tecnología",
+       "Samsung",
+      "Celulares"
+  ]
+},
+{    
+    "title": "Huawei",
+    "description": "Huawei Y5 Neo",
+    "warehouseAvailability": "In Stock.",
+    "points": 2400,
+    "imageUrlList": [
+       "https://images.unsplash.com/photo-1546706887-a24528987a75?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=kamil-kot--JUfltUcMG8-unsplash.jpg&w=640"],
+    "categories": [
+       "Tecnología",
+       "Iphone",
+      "Celulares"
+  ]
+},
+{    
+    "title": "Motorola",
+    "description": "Motorolo G9 64GB ",
+    "warehouseAvailability": "In Stock.",
+    "points": 1800,
+    "imageUrlList": [
+       "https://images.unsplash.com/photo-1572069438926-cb9e0a5806d8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=jonas-leupe-cyH4HcZJxGc-unsplash.jpg&w=640"],
+        "categories": [
+       "Tecnología",
+       "Iphone",
+      "Celulares"
+  ]
+},
+{    
+    "title": "Xiaomi",
+    "description": "Xiaomi Redmi 9C 64GB",
+    "warehouseAvailability": "In Stock.",
+    "points": 2400,
+    "imageUrlList": [
+       "https://images.unsplash.com/photo-1621330396173-e41b1cafd17f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=d-c-tr-nh-1t1CBECuqvs-unsplash.jpg&w=640"],
+    "categories": [
+       "Tecnología",
+       "Iphone",
+      "Celulares"
+  ]
+},
+{    
+    "title": "Bogota Medellin",
+    "description": "viaje ida-regreso, 1 adulto",
+    "warehouseAvailability": "In Stock.",
+    "points": 6000,
+    "imageUrlList": [
+       "https://unsplash.com/photos/Csn2LCZqGWs?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"],
+    "categories": [
+       "Viajes",
+      "Diversion"
+  ]
+},
+{    
+    "title": "Bogota Cartagena",
+    "description": "viaje ida-regreso, 1 adulto",
+    "warehouseAvailability": "In Stock.",
+    "points": 6000,
+    "imageUrlList": [
+       "https://unsplash.com/photos/GcHar4P8V_Q?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"],
+    "categories": [
+       "Viajes",
+      "Diversion"
+  ]
+},
+{    
+    "title": "Bogota Amazonas",
+    "description": "viaje ida-regreso, 1 adulto",
+    "warehouseAvailability": "In Stock.",
+    "points": 6000,
+    "imageUrlList": [
+       "https://unsplash.com/photos/MsH5Qrxb8Zc?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"],
+    "categories": [
+       "Viajes",
+      "Diversion"
+  ]
+},
+{    
+    "title": "Bogota Argentina",
+    "description": "viaje ida-regreso, 1 adulto",
+    "warehouseAvailability": "In Stock.",
+    "points": 8000,
+    "imageUrlList": [
+       "https://unsplash.com/photos/QhQ4WgX77G0?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"],
+    "categories": [
+       "Viajes",
+      "Diversion"
+  ]
+},
+{    
+    "title": "Bogota Panama",
+    "description": "viaje ida-regreso, 1 adulto",
+    "warehouseAvailability": "In Stock.",
+    "points": 7000,
+    "imageUrlList": [
+       "https://unsplash.com/photos/jVCXlJrnl5w?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink"],
+    "categories": [
+       "Viajes",
+      "Diversion"
+  ]
+}
+]
