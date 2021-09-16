@@ -1,0 +1,38 @@
+.btn_product_sug{
+    width: 13vw;
+    height: 28vh;
+    color: #FFFFFF;
+    margin-left: 0;
+    z-index: 5;
+    text-align: center;
+}
+.label_btn{
+    color: #c50000;
+    font-size: 1em;
+    width: 12vw;
+    height: 8vh;
+    margin-right: 0.5vw;
+}
+.btn_sug{
+    width: 13vw;
+    height: 15vh;
+    background-image: url("/src/images/mas.png");
+    background-repeat: no-repeat;
+    background-size: 20% 40%;
+    background-position: 50% 22%;
+    padding-top: 6vh;
+    border: 0;
+    background-color: #FFFFFF;
+    margin-top:3vh;
+    color: #c50000;
+    border: 2px #c50000 inset;
+}
+.btn_sug:hover{
+    cursor: pointer;
+    background-image: url("/src/images/mas2.png");
+    background-repeat: no-repeat;
+    background-size: 20% 40%;
+    background-position: 50% 22%;
+    box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+

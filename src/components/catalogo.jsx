@@ -4,6 +4,7 @@ import '../estilos/home.css'
 import '../estilos/footer.css'
 import '../estilos/header.css'
 import '../estilos/catalogo.css'
+import '../estilos/buttonModal.css'
 import {Cards} from './cards'
 import lupa from '../images/lupa.png'
 import { db } from '../firebase'
@@ -98,14 +99,8 @@ export function Catalogo() {
               </div>
 
 
-    </div>
-  )
-}
+            <div className='dimension_btn'><ButtonModal /></div>
 
-export function BotonModal() {
-  return (
-    <div>
-      <ButtonModal />
     </div>
   )
 }

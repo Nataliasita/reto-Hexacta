@@ -1,5 +1,5 @@
 .container{
-  height: 180vh;
+  height: 240vh;
   width: 100vw;
   background: #FFFFFF;
   display: flex;
@@ -32,10 +32,9 @@
   right: 11vw;
 }
 .vd1{
-  height: 60vh;
+  height: 124vh;
   position: absolute;
-  width:50vw;
-  top:27vh;
+  top:-35vh;
   margin-left: -0.7vw;
   z-index: 3;
   left: 0;
@@ -47,15 +46,14 @@
   font-size: 1.5em;
   top:27vh;
   left:0;
-  width:48.6vw;
-  height:60vh;
+  width:100vw;
+  height:62vh;
   margin-left: 0;
   text-align:right;
   right: 2vw;
-  background:rgba(0, 0, 0, 0.164);
+  background:rgba(0, 0, 0, 0.322);
   z-index:4;
-  border-bottom-right-radius:150px;
-  box-shadow: 4px 2px 15px rgba(0, 0, 0, 0.7);
+
 }
 .bolso1{
   position:absolute;
@@ -75,10 +73,10 @@
 .title1{
   position: absolute;
   color: #ffffff;
-  top:50vh;
+  top:44vh;
   left: 2vw;
   z-index: 6;
-  font-size: 1.5em;
+  font-size: 3em;
 }
 .title2{
   position: absolute;
@@ -116,7 +114,7 @@
   z-index: 7;
   height: 8vh;
   width: 25vw;
-  top: 153.5vh;
+  top: 207vh;
   left: 39vw;
   padding: 0 3vw 0 2vw;
   flex-direction: row;
