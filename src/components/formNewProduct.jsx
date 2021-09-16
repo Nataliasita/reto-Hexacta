@@ -1,150 +1,162 @@
-import React, {useState, useRef} from 'react'
-import '../estilos/formNewProducts.css'
-import {FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch} from '@fortawesome/free-solid-svg-icons'
+import React, { useState, useRef } from "react";
+import "../estilos/formNewProducts.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import {useModal} from '../components/useModal'
 
-
-export function Form({children}) {
-  const [link , setLink] = useState('');
-  const [imageFile, setImageFile] = useState('');
-  const [title, setTitle] = useState('');
-  const [selectCatg, setSelectCatg] = useState('');
-  const [errors, setErrors] = useState({link:'', imageFile:'', title:'', selectCatg:''});
-  const [classDrag, setClassDrag] = useState('drag_image')
+export function Form({ children }) {
+  const [link, setLink] = useState("");
+  const [imageFile, setImageFile] = useState("");
+  const [title, setTitle] = useState("");
+  const [selectCatg, setSelectCatg] = useState("");
+  const [errors, setErrors] = useState({
+    link: "",
+    imageFile: "",
+    title: "",
+    selectCatg: "",
+  });
+  const [classDrag, setClassDrag] = useState("drag_image");
   const [btnDisable, setBtnDisable] = useState(true);
-  const [image, setImage] = useState(null)
-  const [file, setFile] = useState(null)
+  const [image, setImage] = useState(null);
+  const [file, setFile] = useState(null);
 
-  const refInputFile = useRef(null)
-  
+  const refInputFile = useRef(null);
+
   //EXPRESIONES REGULARES PARA VALIDAR EL FORMULARIO
   const expresiones = {
-	  link: /^(ftp|http|https):\/\/[^ "]+$/, // Comprueba ftp, http, https, requiere www y comprueba cualquier número de caracteres válidos.
-	  imageFile:/(.jpg|.jpeg|.png|.gif)$/i,// Validar la extension del archivo jpg, jpeg, png, gif
-	  title: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-  }
+    link: /^(ftp|http|https):\/\/[^ "]+$/, // Comprueba ftp, http, https, requiere www y comprueba cualquier número de caracteres válidos.
+    imageFile: /(.jpg|.jpeg|.png|.gif)$/i, // Validar la extension del archivo jpg, jpeg, png, gif
+    title: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+  };
 
   //FUNCION PARA VALIDAR LINKS
   const onChangeLink = (e) => {
-   if(e.target.value.length>0){
-     setLink(e.target.value);
-    //VALIDAR SI EL LINK ES HTTP, HTTPS
-    let validar= expresiones.link.test(e.target.value); 
-    //VALIDAR SI EL LINK TERMINA EN EXE
-    let validarExe= e.target.value.endsWith('.exe');  
-      if(validar && !validarExe){
-        setErrors({...errors, link:""});
-      }
-      else{
-        if(validarExe){
-          setErrors({...errors, link:"El link contiene un ejecutable .EXE"});
-          setBtnDisable(true)
-        }
-        else{
-          setErrors({...errors, link:"El link no es válido"});
-          setBtnDisable(true)
+    if (e.target.value.length > 0) {
+      setLink(e.target.value);
+      //VALIDAR SI EL LINK ES HTTP, HTTPS
+      let validar = expresiones.link.test(e.target.value);
+      //VALIDAR SI EL LINK TERMINA EN EXE
+      let validarExe = e.target.value.endsWith(".exe");
+      if (validar && !validarExe) {
+        setErrors({ ...errors, link: "" });
+      } else {
+        if (validarExe) {
+          setErrors({ ...errors, link: "El link contiene un ejecutable .EXE" });
+          setBtnDisable(true);
+        } else {
+          setErrors({ ...errors, link: "El link no es válido" });
+          setBtnDisable(true);
         }
       }
-    }
-    else{
-      setLink('');
-      setErrors({...errors, link:''}) 
+    } else {
+      setLink("");
+      setErrors({ ...errors, link: "" });
     }
     validateButton();
-	}
+  };
 
   //FUNCION PARA VALIDAR IMAGEN
   const onChangeImageFile = (e) => {
     setImageFile(e.target.value);
-    let validar= expresiones.imageFile.test(e.target.value);
-    if(validar){
-      setErrors({...errors, imageFile:''}) 
+    let validar = expresiones.imageFile.test(e.target.value);
+    if (validar) {
+      setErrors({ ...errors, imageFile: "" });
+    } else {
+      setErrors({
+        ...errors,
+        imageFile:
+          "La extensión no es válida, el formato debe ser jpg, jpeg, png y gif",
+      });
+      setBtnDisable(true);
     }
-    else{
-      setErrors({...errors, imageFile:"La extensión no es válida, el formato debe ser jpg, jpeg, png y gif"});
-      setBtnDisable(true)
-    }
+    const file = e.target.files[0];
+    showImage(file);
     validateButton();
-	}
+  };
 
   //FUNCION PARA VALIDAR TITLE
   const onChangeTitle = (e) => {
-    if(e.target.value.length>0){
+    if (e.target.value.length > 0) {
       setTitle(e.target.value);
-      let validar= expresiones.title.test(e.target.value);
-      if(validar){
-        setErrors({...errors, title:''})
+      let validar = expresiones.title.test(e.target.value);
+      if (validar) {
+        setErrors({ ...errors, title: "" });
+      } else {
+        setLink("");
+        setErrors({
+          ...errors,
+          title: "No esta permitido usar números y caracteres especiales",
+        });
+        setBtnDisable(true);
       }
-      else{
-        setLink('');
-        setErrors({...errors, title:'No esta permitido usar números y caracteres especiales'})
-      }
-    } else{
-      setLink('');
-      setErrors({...errors, link:''}) 
-    } 
-    validateButton(); 
-	}
+    } else {
+      setLink("");
+      setErrors({ ...errors, link: "" });
+    }
+    validateButton();
+  };
 
   //FUNCION PARA VALIDAR SELECT
-  const onChangeSelect=(e)=>{
+  const onChangeSelect = (e) => {
     setSelectCatg(e.target.value);
-    if(e.target.value ===''){
-      setErrors({...errors, selectCatg:'Debe selecccionar una categoría'})
+    if (e.target.value === "") {
+      setErrors({ ...errors, selectCatg: "Debe selecccionar una categoría" });
+      setBtnDisable(true);
+    } else {
+      setErrors({ ...errors, selectCatg: "" });
     }
-    else{
-      setErrors({...errors, selectCatg:''}) 
-    } 
-    validateButton(); 
-  }
+    validateButton();
+  };
 
   //FUNCION VALIDAR BOTON SUBMIT
-  const validateButton= () =>{
-    if(!link && !imageFile && !title && !selectCatg){
-      setBtnDisable(true)
+  const validateButton = () => {
+    if (!link && !imageFile && !title && !selectCatg) {
+      setBtnDisable(true);
+    } else {
+      setBtnDisable(false);
     }
-    else{
-      setBtnDisable(false) 
-    
-    }
-  }
+  };
 
   //FUNCION PARA BOTON SUBMIT
-  const handleSubmit= (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("le diste click")
-  }
+    console.log("le diste click");
+  };
 
   //PARA LAS OPCIONES DE LAS CATEGORIAS DEL SELECT
-  const valueOptions=[ 
-    "Accesorios", "Celulares", "Mascotas","Tecnología","Viajes","Deportes"
-  ]
-  
+  const valueOptions = [
+    "Accesorios",
+    "Celulares",
+    "Mascotas",
+    "Tecnología",
+    "Viajes",
+    "Deportes",
+  ];
+
   //FUNCION PARA PINTAR IMAGEN
-  const selectImage = (e) => {
-		refInputFile.current.click()
-	}
+  const selectImage = () => {
+    refInputFile.current.click();
+  };
 
   const showImage = (file) => {
-    const fileReader = new FileReader()
-    fileReader.readAsDataURL(file)
+    const fileReader = new FileReader();
+    console.log(fileReader);
+    fileReader.readAsDataURL(file);
 
-    fileReader.addEventListener('load', (e) => {
-      setImage(e.target.result)
-    })
-    setFile(file)
-  }
+    fileReader.addEventListener("load", (e) => {
+      setImage(e.target.result);
+    });
+    // setFile(file)
+  };
 
   const addImage = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    refInputFile.current.files = e.dataTransfer.files //Nos trae los archivos cargados en el input en la posicion 0
-    const file = refInputFile.current.files[0]
+    refInputFile.current.files = e.dataTransfer.files; //Nos trae los archivos cargados en el input en la posicion 0
+    const file = refInputFile.current.files[0];
 
-    showImage(file)
-  }
-  
+    showImage(file);
+  };
 
   return (
     <>
@@ -176,7 +188,6 @@ export function Form({children}) {
               onDrop={addImage}
               required
             />
-           
             <button
               className="FontAwesomeBtn"
               id="imageFile"
@@ -186,9 +197,10 @@ export function Form({children}) {
             </button>
             {errors.imageFile && <p className="errores">{errors.imageFile}</p>}
           </div>
-          <div
-              className={classDrag} 
-              id='divImage'
+          <div className="contentForm">
+            <div
+              className={classDrag}
+              id="divImage"
               onDragOver={(e) => {
                 e.preventDefault();
                 setClassDrag("drag__image active");
@@ -200,8 +212,9 @@ export function Form({children}) {
               onDrop={addImage}
               onClick={selectImage}
             >
-              <img src={image} alt="" />
+              <img width="200px" height="200px" src={image} alt="" />
             </div>
+          </div>
 
           <div className="contentForm">
             <label htmlFor="title">Titulo:</label>
@@ -242,12 +255,10 @@ export function Form({children}) {
 
         <div className="modal-footer">
           <button type="reset" className="btn2">
-            {" "}
-            Reiniciar{" "}
+            Reiniciar
           </button>
           <button type="submit" className="btn2" disabled={btnDisable}>
-            {" "}
-            Agregar{" "}
+            Agregar
           </button>
         </div>
       </form>
@@ -255,4 +266,4 @@ export function Form({children}) {
   );
 }
 
-export default Form
+export default Form;
