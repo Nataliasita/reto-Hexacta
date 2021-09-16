@@ -12,6 +12,7 @@ import log3 from '../images/log3.png'
 import video_d from '../images/deporte.mp4'
 
 
+
 export function Home() {
     return (
         <div className ="container">
@@ -20,7 +21,7 @@ export function Home() {
             <video className="vd1" autoplay="1" loop="1" muted preload="auto">
              <source src={video_d } type="video/mp4" />
             </video>
-                     <p className="title1">Viajes</p>
+                     <p className="title1">Acumula puntos y disfruta la aventura...</p>
                 
                 <img src={mascota} className="lectura" alt="" />
                      <p className="title2">Mascotas</p>

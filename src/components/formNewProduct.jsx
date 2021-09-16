@@ -163,8 +163,9 @@ export function Form({ children }) {
       <form action="" className="conteinerForm" onSubmit={handleSubmit}>
         <div className="form">
           <div className="contentForm">
-            <label htmlFor="link">Enlace al sitio:</label>
+            <label className='lb_form' htmlFor="link">Enlace al sitio:</label>
             <input
+              className='int_form'
               type="text"
               name="link"
               value={link}
@@ -177,8 +178,9 @@ export function Form({ children }) {
           </div>
 
           <div className="contentForm">
-            <label htmlFor="imageFile">Imagen:</label>
+            <label className='lb_form' htmlFor="imageFile">Imagen:</label>
             <input
+              className='int_form'
               ref={refInputFile}
               type="file"
               name="imageFile"
@@ -217,7 +219,7 @@ export function Form({ children }) {
           </div>
 
           <div className="contentForm">
-            <label htmlFor="title">Titulo:</label>
+            <label  htmlFor="title">Titulo:</label>
             <input
               className="formControl"
               type="text"
@@ -254,8 +256,14 @@ export function Form({ children }) {
         </div>
 
         <div className="modal-footer">
+<<<<<<< HEAD
           <button type="reset" className="btn2">
             Reiniciar
+=======
+          <button type="reset" className="btn1">
+            {" "}
+            Reiniciar{" "}
+>>>>>>> 57ef214498529c017ed4070fc93097d85c421caf
           </button>
           <button type="submit" className="btn2" disabled={btnDisable}>
             Agregar

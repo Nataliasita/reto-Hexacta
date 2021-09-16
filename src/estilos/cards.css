@@ -1,16 +1,18 @@
 .card_container {
     background-color: rgb(248, 248, 248);
-    width: 19vw;
+    width: 18.5vw;
     height: 60vh;
     flex-direction: column;
     text-align: center;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     margin-left: 0.5vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 .image_card{
     margin-top:0;
-    width: 19vw;
+    width: 18.5vw;
     height: 31vh;
     background-color: rgb(0, 139, 53);
     display: flex;
@@ -32,7 +34,7 @@
     text-align: center;
 }
 .card_title{
-    width: 19vw;
+    width: 18.5vw;
     height: 4vh;
     margin: 0;
     position: relative;
@@ -44,7 +46,7 @@
 }
 .card_description{
     margin: 0;
-    width: 19vw;
+    width: 18.5vw;
     height: 7vh;
     top:-3.5vh;
     position: relative;
@@ -58,7 +60,7 @@
     height: 5vh;
     left: 0;
     position: relative;
-    top: -3.9vh;
+    top: -4.1vh;
     font-size: 1.3em;
     font-weight: bold;
     color: #c50000;
@@ -81,8 +83,6 @@
     margin: 2vh 0 0 0;
     width: 16vw;
     height: 6vh;
-    background: #c50000;
-    color: #FFFFFF;
     left: 0;
     font-size: 1em;
     position: relative;
@@ -90,10 +90,12 @@
     border-radius: 8px;
     outline: none !important;
     text-decoration: none !important;
-    border: 1.5px #c50000 solid;
+    background-color: #ffffff;
+    border:#c50000 1px solid;
+    color: #c50000;
 }
 .card_send_cart{
-    width: 19vw;
+    width: 18.5vw;
     height: 5vh;
     color: #c50000;
     margin: 2vh 0 0 0;
@@ -104,9 +106,8 @@
     font-style: oblique;
 }
 .card_details:hover{
-    background: #ffffff;
-    border:#c50000 1px solid;
-    color: #c50000;
+    border: 1.5px #c50000 solid;
     cursor: pointer;
-    
+    background-color: #c50000;
+    color: #FFFFFF;
 }

@@ -9,15 +9,14 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  background: #9e9e9e;
-  margin-top: 3rem;
+  background: #b3b3b3;
+  margin-top: 11vh;
 }
 
 .contentForm{
   width: 100%;
 }
-
-label{
+.lb_form{
   width: 25%;
   float: left;
   text-align: left;
@@ -25,7 +24,7 @@ label{
   font-weight: bold;
 }
 
-input{
+.int_form{
   width: 74%;
   border: 0.1rem solid #ad0000;
   font-size: 1rem;
@@ -36,6 +35,9 @@ input{
 .FontAwesomeBtn{
   background: #ad0000;
   border: 0.1rem solid #ad0000;
+  position: relative;
+  left: -13vw;
+  top: -6.3vh;
 }
 
 .searchBtn{
@@ -62,17 +64,35 @@ select{
   padding: 1rem;
 }
 
+.btn1{
+  line-height: 3;
+  margin-right: .28rem;
+  background: #ffffff;
+  color:#ad0000;
+  border:#ad0000 1px solid;
+  font-size: 1.1em;
+  width: 10vw;
+}
 .btn2{
   line-height: 3;
   margin-right: .28rem;
-  background: #ad0000;
-  color:#fff;
-  border:#ad0000;
+  background: #ffffff;
+  color:#ad0000;
+  border:#ad0000 1px solid;
   font-size: 1.1em;
+  width: 10vw;
+
 }
+.btn1:hover{
+  background-color: #c50000;
+  cursor: pointer;
+  color: #ffffff;
+} 
 
 .btn2:hover{
-  background-color: #c50000c7;
+  background-color: #c50000;
+  cursor: pointer;
+  color: #ffffff;
 } 
 
 .errores{

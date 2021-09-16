@@ -9,11 +9,11 @@ export function ButtonModal() {
     const [isOpenModal1, openModal1, closeModal1] = useModal(false);
 
     return (
-        <div>
-            <label htmlFor="">¿No encuentras lo que buscas?</label>
-            <button type='button' onClick={openModal1}>Sugerir Producto</button>
+        <div className="btn_product_sug">
+            <label className='label_btn' htmlFor="">¿No encontraste el producto que buscabas?</label>
+            <button className='btn_sug'type='button' onClick={openModal1}>Sugerir Producto</button>
             <Modal isOpen={isOpenModal1} closeModal1={closeModal1}>
-                <h3>Productos Sugeridos</h3>
+                
                 <Form/> 
             </Modal> 
         </div>
