@@ -7,7 +7,10 @@ import { Catalogo, BotonModal} from './components/catalogo';
 import { Carrito} from './components/carrito';
 //import { ButtonModal } from './components/buttonModal';
 
+
 function App() {
+
+  
   return (
     <Router>
       <div className="router-container">

@@ -1,64 +1,112 @@
 .card_container {
     background-color: rgb(248, 248, 248);
-    width: 18vw;
-    height: 58vh;
-    display: flex;
-    position: absolute;
+    width: 19vw;
+    height: 60vh;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
-    padding: 1vw;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
+    margin-left: 0.5vw;
 }
 .image_card{
-    width: 18vw;
+    margin-top:0;
+    width: 19vw;
     height: 31vh;
-    position: absolute;
-    top: 0;
-    left: 0;
     background-color: rgb(0, 139, 53);
+    display: flex;
+    margin: 0;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+}
+.category_producto{
+    background: rgb(3, 0, 163);
+    width: 7vw;
+    height: 4vh;
+    margin: 0;
+    text-align: right;
+    top:-4vh;
+    z-index: 20;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    text-align: center;
 }
 .card_title{
-    background: chartreuse;
-    top:28vh;
-    width: 18vw;
+    width: 19vw;
     height: 4vh;
-    left: 0;
-    position: absolute;
+    margin: 0;
+    position: relative;
+    top:-3vh;
+    font-size: 1em;
+    font-weight: bold;
+    color: #3a3a3a;
+    padding: 0 0.7vw 0 0.7vw;
 }
 .card_description{
-    background: rgb(0, 195, 255);
-    top:33vh;
-    width: 18vw;
-    height: 4vh;
-    position: absolute;
-    left: 0;
+    margin: 0;
+    width: 19vw;
+    height: 7vh;
+    top:-3.5vh;
+    position: relative;
+    color: #464646;
+    padding: 0 1vw 0 1vw;
+    font-size: 0.95em;
 }
 .card_points_value{
-    background: rgb(140, 0, 255);
-    top:38vh;
-    width: 18vw;
+    margin: 1vh 0  0.5vh 0;
+    width: 10vw;
     height: 5vh;
-    position: absolute;
     left: 0;
+    position: relative;
+    top: -3.9vh;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #c50000;
+    text-align: right;
+    padding-right: 0.5vw;
 }
-.card_details{
-    top:46.5vh;
-    width: 16vw;
+.name_puntos{
+    position: relative;
     height: 5vh;
-    position: absolute;
-    background: #ad0000;
+    width: 9vw;
+    top:-9.4vh;
+    left: 10vw;
+    margin: 0;
+    text-align: left;
+    padding-top: 1vh;
+    color: #c50000;
+    font-size: 0.8em;
+}    
+.card_details{
+    margin: 2vh 0 0 0;
+    width: 16vw;
+    height: 6vh;
+    background: #c50000;
     color: #FFFFFF;
-    left: 1vw;
-
+    left: 0;
+    font-size: 1em;
+    position: relative;
+    top: -10.5vh;
+    border-radius: 8px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: 1.5px #c50000 solid;
 }
 .card_send_cart{
-    top:52vh;
-    width: 16vw;
+    width: 19vw;
     height: 5vh;
-    position: absolute;
-    border:#ad0000 1px solid ;
-    color: #ad0000;
-    left: 1vw;
+    color: #c50000;
+    margin: 2vh 0 0 0;
+    position: relative;
+    top: -10vh;
+    left: 0;
+    color: #464646;
+    font-style: oblique;
+}
+.card_details:hover{
+    background: #ffffff;
+    border:#c50000 1px solid;
+    color: #c50000;
+    cursor: pointer;
+    
 }

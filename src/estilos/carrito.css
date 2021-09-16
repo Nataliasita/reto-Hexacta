@@ -1,0 +1,7 @@
+.containt_car{
+    height: 180vh;
+    width: 100vw;
+    background: #FFFFFF;
+    display: flex;
+    overflow-x: hidden;
+  }
