@@ -3,8 +3,9 @@ import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import './App.css';
 import { Home } from'./components/home';
-import { Catalogo} from './components/catalogo';
+import { Catalogo, BotonModal} from './components/catalogo';
 import { Carrito} from './components/carrito';
+//import { ButtonModal } from './components/buttonModal';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route path="/catalogo" exact>
             <Catalogo/>
+            <BotonModal/>
           </Route>
         </Switch>
         <Switch>
