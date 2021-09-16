@@ -256,15 +256,10 @@ export function Form({ children }) {
         </div>
 
         <div className="modal-footer">
-<<<<<<< HEAD
           <button type="reset" className="btn2">
             Reiniciar
-=======
-          <button type="reset" className="btn1">
-            {" "}
-            Reiniciar{" "}
->>>>>>> 57ef214498529c017ed4070fc93097d85c421caf
           </button>
+          
           <button type="submit" className="btn2" disabled={btnDisable}>
             Agregar
           </button>
