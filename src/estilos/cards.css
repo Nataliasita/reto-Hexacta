@@ -1,7 +1,7 @@
 .card_container {
     background-color: rgb(248, 248, 248);
-    width: 18vw;
-    height: 58vh;
+    width: 19vw;
+    height: 60vh;
     flex-direction: column;
     text-align: center;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
@@ -10,7 +10,7 @@
 }
 .image_card{
     margin-top:0;
-    width: 18vw;
+    width: 19vw;
     height: 31vh;
     background-color: rgb(0, 139, 53);
     display: flex;
@@ -19,31 +19,49 @@
     border-top-left-radius:10px;
 }
 .category_producto{
-    background: rgb(4, 0, 255);
-    width: 18vw;
+    background: rgb(3, 0, 197);
+    width: 7vw;
     height: 4vh;
     margin: 0;
-    z-index: 5;
+    text-align: right;
+    top:-4vh;
+    z-index: 20;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 0.9em;
+    text-align: center;
 }
 .card_title{
-    background: chartreuse;
-    width: 18vw;
+    width: 19vw;
     height: 4vh;
     margin: 0;
+    position: relative;
+    top:-3vh;
+    font-size: 1em;
+    font-weight: bold;
+    color: #3a3a3a;
+    padding: 0 1vw 0 1vw;
 }
 .card_description{
-    background: rgb(0, 195, 255);
     margin: 0;
-    width: 18vw;
-    height: 4vh;
-  
+    width: 19vw;
+    height: 7vh;
+    top:-3.5vh;
+    position: relative;
+    color: #464646;
+    padding: 0 1vw 0 1vw;
+
 }
 .card_points_value{
-    background: rgb(140, 0, 255);
     margin: 1vh 0  0.5vh 0;
-    width: 18vw;
+    width: 19vw;
     height: 5vh;
     left: 0;
+    position: relative;
+    top: -3.9vh;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #c50000;
 }
 .card_details{
     margin: 2vh 0 0 0;
@@ -51,13 +69,29 @@
     height: 6vh;
     background: #c50000;
     color: #FFFFFF;
-    left: 1vw;
+    left: 0;
     font-size: 1em;
-
+    position: relative;
+    top: -5.3vh;
+    border-radius: 8px;
+    outline: none !important;
+    text-decoration: none !important;
+    border: 1.5px #c50000 solid;
 }
 .card_send_cart{
-    width: 16vw;
+    width: 19vw;
     height: 5vh;
     color: #c50000;
     margin: 2vh 0 0 0;
+    position: relative;
+    top: -5.1vh;
+    left: 0;
+
+}
+.card_details:hover{
+    background: #ffffff;
+    border:#c50000 1px solid;
+    color: #c50000;
+    cursor: pointer;
+    
 }

@@ -10,6 +10,16 @@ import lupa from '../images/lupa.png'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore/lite';
 
+function searchingTerm(term){ 
+  return function(x){ 
+    return x.title.toLowerCase().includes(term) || !term;
+   }
+
+ }
+
+
+
+
 export function Catalogo() {
 
   // async function getCities(db) {
@@ -20,6 +30,7 @@ export function Catalogo() {
   // }
 
   const [productos, setProductos] = useState([]);
+  const [term, setTerm] = React.useState('');
 
   useEffect(()=>{
     const dbCollection = collection(db, "Productos");
@@ -38,14 +49,18 @@ export function Catalogo() {
       <MyHeader/>
         <form action="">
              <img src={lupa} className="lupa1" alt="" />
-             <input className="buscar" placeholder="Buscar producto" type="text"/>
+
+             <input className="buscar"
+              onChange= {e => setTerm(e.target.value)} 
+              name='term'
+              placeholder="Buscar producto" type="text"/>
              
         </form>
               <button className="button_buscar" type="submit">Buscar</button>
 
              <div className="products">
 
-               {productos.map((item) =>    
+               {productos.filter(searchingTerm(term)).map((item) =>    
                <Cards {...item}>                              
                </Cards>
                )}

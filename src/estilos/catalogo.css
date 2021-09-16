@@ -6,17 +6,17 @@
 }
 .products{
     height: 175vh;
-    width: 80vw;
+    width: 82vw;
     top:40vh;
-    left:18vw;
-    background: #d8d8d8;
+    left:16.2vw;
+    background: #e4e4e4;
     position: absolute;
     display: grid;
     overflow-y: scroll;
     padding-bottom:2vh;
     padding-top: 1vh;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2vh;
+    grid-gap: 1.5vh;
     grid-row: auto;
 
 }
