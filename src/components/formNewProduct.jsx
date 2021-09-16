@@ -3,8 +3,9 @@ import "../estilos/formNewProducts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import {useModal} from '../components/useModal'
+import ProcessingImg from './ProcessingImg'
 
-export function Form({ children }) {
+export function Form() {
   const [link, setLink] = useState("");
   const [imageFile, setImageFile] = useState("");
   const [title, setTitle] = useState("");
@@ -18,7 +19,7 @@ export function Form({ children }) {
   const [classDrag, setClassDrag] = useState("drag_image");
   const [btnDisable, setBtnDisable] = useState(true);
   const [image, setImage] = useState(null);
-  const [file, setFile] = useState(null);
+  //const [file, setFile] = useState(null);
 
   const refInputFile = useRef(null);
 
@@ -215,6 +216,7 @@ export function Form({ children }) {
               onClick={selectImage}
             >
               <img width="200px" height="200px" src={image} alt="" />
+              <ProcessingImg image={image} />
             </div>
           </div>
 
