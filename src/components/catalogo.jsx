@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import MyHeader from './header'
-import Form from './formNewProduct'
 import '../estilos/home.css'
 import '../estilos/footer.css'
 import '../estilos/header.css'
@@ -69,13 +68,32 @@ export function Catalogo() {
               <div className="filtro">
               <p className="title_filtro"> Filtrar Categoria</p>
 
-               <form  action="">
-                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="1"/> Accesorios</label> 
-                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="2"/> Celulares</label>
-                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="3"/> Deportes</label>
-                      <label htmlFor="" className="op"><input  type="radio" name="productos" value="4"/> Mascotas</label>
-                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="5"/> Tecnologia</label>
-                      <label htmlFor="" className="op" ><input type="radio" name="productos" value="6"/> Viajes</label>
+               <form  action="" className="op">
+                      <label >
+                      <input type="radio" name="productos"  value="accesorios"/> 
+                      Accesorios
+                      </label> 
+                      <label >
+                      <input type="radio" name="productos"  value="celulares"/> 
+                      Celulares
+                      </label> 
+                      <label >
+                      <input type="radio" name="productos"  value="deportes"/> 
+                      Deportes
+                      </label> 
+                      <label >
+                      <input type="radio" name="productos"  value="mascotas"/> 
+                      Mascotas
+                      </label> 
+                      <label >
+                      <input type="radio" name="productos"  value="tecnologia"/> 
+                      Tecnologia
+                      </label> 
+                      <label >
+                      <input type="radio" name="productos"  value="viajes"/> 
+                      Viajes
+                      </label> 
+                     
                   </form>
 
               </div>
@@ -83,26 +101,4 @@ export function Catalogo() {
 
     </div>
   )
-}
-
-
-export function Formula(){
-
-
-  const [showProductForm, setShowProductForm]= useState(true)
-
-    return (
-        <div>
-            <label htmlFor="">¿No encuentraslo que buscas?</label>
-            <button 
-                type='button'
-                onClick={() => setShowProductForm(!showProductForm)}
-                >Agregar Producto
-            </button>
-            
-            {showProductForm && <Form></Form> }
-            
-        </div>
-    )
-
 }
