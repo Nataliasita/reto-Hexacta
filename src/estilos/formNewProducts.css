@@ -116,3 +116,6 @@ select{
   border: 1px solid #c50000c7;
   float: right;
 }
+.drag_image{
+  display: none;
+}

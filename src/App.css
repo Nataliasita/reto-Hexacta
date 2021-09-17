@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.divPixel{
+  width: 1px;
+  height: 1px;
+  float: left;
+  /* background-color: black; */
+}
