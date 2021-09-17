@@ -220,16 +220,12 @@ export function Form(props) {
               onDrop={addImage}
               required
             />
-            {/* <button
-              className="FontAwesomeBtn"
-              id="imageFile"
-              style={{ fontSize: "24px", color: "white" }}
-            >
-              <FontAwesomeIcon icon={faSearch} />
-            </button> */}
             {errors.imageFile && <p className="errores">{errors.imageFile}</p>}
           </div>
-
+          <div className= "divSpinner">
+            {!imageFile == '' && !image ? <div className= 'spinner'/> : ''}
+          </div>
+          
           <div className="contentForm">
             <div
               className={classDrag}
