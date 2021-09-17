@@ -217,8 +217,11 @@ export function Form() {
               onClick={selectImage}
             >
               <img width="200px" height="200px" src={image} alt="" />
-              {image && <ProcessingImg image={image} />}
+              
               {/* <ProcessingImg /> */}
+            </div>
+            <div>
+              {image && <ProcessingImg image={image} />}
             </div>
           </div>
 
