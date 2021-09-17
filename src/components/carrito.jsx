@@ -27,7 +27,10 @@ export function Carrito() {
 
                     <div className="products1">
                         <ProductCar></ProductCar>
-
+                        <ProductCar></ProductCar>
+                        <ProductCar></ProductCar>
+                        <ProductCar></ProductCar>
+                        <ProductCar></ProductCar>
                     </div>
                     
                     <div className="totales">

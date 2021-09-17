@@ -46,7 +46,7 @@
     position: absolute;
     height: 3.2vh;
     width: 46vw;
-    color: rgb(202, 0, 0);
+    color: #027789;
   }
   .modal.is-open {
     display: flex;

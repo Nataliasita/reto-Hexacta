@@ -29,27 +29,27 @@ export function Home() {
                 <p className="bienvenida">Te compartimos algunas opciones para redimir tus puntos </p>
                 
                 
-                <Link to="/Catalogo">
+                <Link to="/Catalogo?category=accesorios">
                     <img src={bolso} className="bolso1" alt="" />
                      <p className="title3">Accesorios</p>
                 </Link>
-                <Link to="/Catalogo">
+                <Link to="/Catalogo?category=celulares">
                 <img src={celular} className="celular1" alt="" />
                      <p className="title5">Celulares</p>
                 </Link>
-                <Link to="/Catalogo">
+                <Link to="/Catalogo?category=deportes">
                 <img src={deporte} className="deportes" alt="" />
                      <p className="title6">Deportes</p>
                 </Link>
-                <Link to="/Catalogo">
+                <Link to="/Catalogo?category=mascotas">
                 <img src={mascota} className="mascota" alt="" />
                     <p className="title2">Mascotas</p>
                 </Link>   
-                <Link to="/Catalogo">    
+                <Link to="/Catalogo?category=tecnologia">    
                 <img src={compu} className="compu" alt="" />
                     <p className="title7">Tecnologia</p>
                 </Link>     
-                <Link to="/Catalogo">   
+                <Link to="/Catalogo?category=viajes">   
                 <img src={viaje} className="viaje" alt="" />
                     <p className="title8">Viajes</p>
                     </Link> 

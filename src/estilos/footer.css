@@ -4,5 +4,20 @@
     width: 100vw;
     position: absolute;
     margin-top:221vh;
+    display: flex;
     flex-direction: column;
+
+    
+
+}
+.fot1{
+    color: #FFFFFF;
+    height: 5vh;
+    position: relative;
+    width: 40vw;
+    left: 5vw;
+    top:5vh;
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bolder;
 }

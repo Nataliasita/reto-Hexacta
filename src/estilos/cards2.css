@@ -21,7 +21,7 @@
     border-top-left-radius:10px;
 }
 .category_producto{
-    background: rgb(3, 0, 163);
+    background: rgb(1, 0, 80);
     width: 7vw;
     height: 4vh;
     margin: 0;
@@ -63,7 +63,7 @@
     top: -4.1vh;
     font-size: 1.3em;
     font-weight: bold;
-    color: #c50000;
+    color: #027789;
     padding-right: 0.5vw;
     text-align: center;
 }
@@ -76,7 +76,7 @@
     margin: 0;
     text-align: left;
     padding-top: 1vh;
-    color: #c50000;
+    color: #027789;
     font-size: 0.8em;
 }    
 .card_details{
@@ -91,8 +91,8 @@
     outline: none !important;
     text-decoration: none !important;
     background-color: #ffffff;
-    border:#c50000 1px solid;
-    color: #c50000;
+    border:#027789 1px solid;
+    color: #027789;
 }
 .infoImagen{
     width: 18.5vw;
@@ -110,8 +110,8 @@
     background-color: #4646466c;;
 }
 .card_details:hover{
-    border: 1.5px #c50000 solid;
+    border: 1.5px#027789 solid;
     cursor: pointer;
-    background-color: #c50000;
+    background-color: #027789;
     color: #FFFFFF;
 }

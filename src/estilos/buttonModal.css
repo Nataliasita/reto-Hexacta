@@ -7,7 +7,7 @@
     text-align: center;
 }
 .label_btn{
-    color: #c50000;
+    color: #027789;
     font-size: 1em;
     width: 12vw;
     height: 8vh;
@@ -24,8 +24,8 @@
     border: 0;
     background-color: #FFFFFF;
     margin-top:3vh;
-    color: #c50000;
-    border: 2px #c50000 inset;
+    color: #027789;
+    border: 2px #027789 inset;
 }
 .btn_sug:hover{
     cursor: pointer;

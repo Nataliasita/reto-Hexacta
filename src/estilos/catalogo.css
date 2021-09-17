@@ -37,7 +37,7 @@
 }
 
 .products::-webkit-scrollbar-thumb {
-    background-color: #990000;
+    background-color: #027789;
     border-radius: 20px;
 }
 .products::-webkit-scrollbar-track {
@@ -56,7 +56,7 @@
     top:31vh;
     left: 32vw;
     outline-width: 0;
-    border-bottom: 1.5px solid #c50000;
+    border-bottom: 1.5px solid #027789;
     border-right: none;
     border-top: none;
     border-left:none;
@@ -71,11 +71,11 @@
     width: 8vw;
     right: 26vw;
     background: none;
-    color: #c50000;
-    border-left: 1.5px #c50000 solid;
-    border-bottom: 1.5px #c50000 solid;
-    border-top: 1.5px #c50000 solid;
-    border-right: 1.5px #c50000 solid;
+    color: #027789;
+    border-left: 1.5px #027789 solid;
+    border-bottom: 1.5px #027789 solid;
+    border-top: 1.5px #027789 solid;
+    border-right: 1.5px #027789 solid;
     outline: none;
     text-decoration: none !important;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
@@ -83,12 +83,12 @@
 }
 .button_buscar:hover{
     cursor: pointer;
-    background:#c50000;
+    background:#027789;
     color: #FFFFFF;
 }
 .filtro{
     top:40vh;
-    height: 60vh;
+    height: 67vh;
     width: 15vw;
     position: absolute;
     background-color: rgb(129, 129, 129);

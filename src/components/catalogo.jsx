@@ -12,44 +12,33 @@ import lupa from '../images/lupa.png'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore/lite';
 import { ButtonModal } from './buttonModal';
+import { useLocation } from 'react-router-dom';
 
 function searchingTerm(term){ 
-  return function(x){ 
+  return function(x) {
+    if (term === 'todas') return true
     return x.title.toLowerCase().includes(term) || x.categories.toLowerCase().includes(term)|| !term ;
-   }
+  }
 }
 
-  // const searchHandler = (searchTerm) => {
-  //   setSearchTerm(searchTerm);
-  //   if (searchTerm !== "") {
-  //     const newProductList = productos.filter((producto) => {
-  //       return Object.values(producto)
-  //         .join(" ")
-  //         .toLowerCase()
-  //         .includes(searchTerm.toLowerCase());
-  //     });
-  //     setSearchResults(newProductList);
-  //   } else {
-  //     setSearchResults(productos);
-  //   }
-  // };
-
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 export function Catalogo(props) {
- 
+  let query = useQuery();
   const [productos, setProductos] = useState([]);
   const [nuevoProducto, setnuevoProducto] = useState([]);
-  const [term, setTerm] = React.useState();
+  const [term, setTerm] = React.useState(() => query.get('category') || null);
   const [selectedCategory, setSelectedCategory] = useState({
-    checked:null
+    checked: query.get('category') || null
   })
   const [reload, setReload] = React.useState(true);
 
-  const handleChange = e =>{
-    const newTerm=setTerm(e.target.value);
+  const handleChange = e => {
+    setTerm(e.target.value);
     setSelectedCategory({
-
-       checked:(e.target.value)
+       checked: e.target.value
     })
   }
   
@@ -109,6 +98,14 @@ export function Catalogo(props) {
               <p className="title_filtro"> Filtrar Categoria</p>
 
                <form  action="" className="op">
+                <label >
+                      <input type="radio"
+                       name="productos"  
+                       value="todas"
+                       checked={selectedCategory.checked === "todas"}
+                       onChange={handleChange}/> 
+                      Todas
+                      </label> 
                       <label >
                       <input type="radio"
                        name="productos"  

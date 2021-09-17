@@ -33,7 +33,7 @@
 }
 
 .error_form{
-  border: 0.1rem solid #ad0000;
+  border: 0.1rem solid #027789;
 }
 
 .valid_form{
@@ -42,8 +42,8 @@
 
 
 .FontAwesomeBtn{
-  background: #ad0000;
-  border: 0.1rem solid #ad0000;
+  background: #027789;
+  border: 0.1rem solid #027789;
   position: relative;
   left: -13vw;
   top: -6.3vh;
@@ -77,8 +77,8 @@ select{
   line-height: 3;
   margin-right: .28rem;
   background: #ffffff;
-  color:#ad0000;
-  border:#ad0000 1px solid;
+  color:#027789;
+  border:#027789 1px solid;
   font-size: 1.1em;
   width: 10vw;
 }
@@ -86,34 +86,34 @@ select{
   line-height: 3;
   margin-right: .28rem;
   background: #ffffff;
-  color:#ad0000;
-  border:#ad0000 1px solid;
+  color:#027789;
+  border:#027789 1px solid;
   font-size: 1.1em;
   width: 10vw;
 
 }
 .btn1:hover{
-  background-color: #c50000;
+  background-color: #027789;
   cursor: pointer;
   color: #ffffff;
 } 
 
 .btn2:hover{
-  background-color: #c50000;
+  background-color: #027789;
   cursor: pointer;
   color: #ffffff;
 } 
 
 .errores{
   font-weight: bold;
-  color: #c50000c7;
+  color: #027789;
   font-size: 1em;
 }
 
 #divImage{
   width:460px;
   height:100%;
-  border: 1px solid #c50000c7;
+  border: 1px solid #027789;
   float: right;
 }
 .drag_image{

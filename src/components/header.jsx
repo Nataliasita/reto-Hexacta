@@ -46,7 +46,7 @@ export function Header() {
 class MyHeader extends React.Component {
     render() {
       return (
-        <header style={{backgroundColor: "#c50000" }} className="header">
+        <header style={{backgroundColor: "#027789" }} className="header">
              <img src={logo} className="logoH" alt="" />
             <p className="nameH" >Points Team Hexacta</p>
 
@@ -88,7 +88,7 @@ export default MyHeader
 export class MyHeaderCar extends React.Component {
     render() {
       return (
-        <header style={{backgroundColor: "#008b35" }} className="header">
+        <header style={{backgroundColor: "#027789" }} className="header">
              <img src={logo} className="logoH" alt="" />
             <p className="nameH" >Points Team Hexacta</p>
 

@@ -111,3 +111,9 @@ a{
     right: 2vw;
     top: 1.5vh;
 }
+ul:hover{
+    cursor: pointer;
+    color: #00bae9;
+    border-radius: 30px;
+    text-align: center;
+}
