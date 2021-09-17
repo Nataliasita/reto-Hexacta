@@ -7,6 +7,7 @@ import '../estilos/header.css'
 import '../estilos/catalogo.css'
 import '../estilos/buttonModal.css'
 import {Cards} from './cards'
+import {CardsNew} from './cards2'
 import lupa from '../images/lupa.png'
 import { db } from '../firebase'
 import { collection, getDocs } from 'firebase/firestore/lite';
@@ -37,6 +38,7 @@ function searchingTerm(term){
 export function Catalogo(props) {
 
   const [productos, setProductos] = useState([]);
+  const [nuevoProducto, setnuevoProducto] = useState([]);
   const [term, setTerm] = React.useState();
   const [selectedCategory, setSelectedCategory] = useState({
     checked:null
@@ -63,6 +65,19 @@ export function Catalogo(props) {
       })
   },[reload]);
 
+  useEffect(()=>{
+    const dbCollection = collection(db, "nuevoProducto");
+    getDocs(dbCollection).then((snapshot) => {
+        const data = [];
+        snapshot.forEach((doc) => {
+          data.push({ ...doc.data() })
+        })
+        console.log(data)
+        setnuevoProducto(data)
+      })
+  },[reload]);
+
+
   return (
     <div className="contain_catalogo">
       <MyHeader/>
@@ -82,6 +97,11 @@ export function Catalogo(props) {
                {productos.filter(searchingTerm(term)).map((item) =>    
                <Cards {...item}>                              
                </Cards>
+               )}
+
+               {nuevoProducto.filter(searchingTerm(term)).map((item1) =>    
+               <CardsNew {...item1}>                              
+               </CardsNew>
                )}
              </div>
             

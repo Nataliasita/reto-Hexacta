@@ -1,5 +1,5 @@
 .container{
-  height: 240vh;
+  height: 245vh;
   width: 100vw;
   background: #FFFFFF;
   display: flex;
@@ -74,7 +74,7 @@
   z-index: 6;
   height: 7vh;
   width: 17vw;
-  background-image: url(/src/images/fn_red.jpg);
+  background-image: url(/src/images/fn_main.jpg);
   text-align: center;
   padding-top: 1vh;
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
@@ -213,7 +213,7 @@
   z-index: 6;
   height: 7vh;
   width: 17vw;
-  background-image: url(/src/images/fn_red.jpg);
+  background-image: url(/src/images/fn_main.jpg);
   text-align: center;
   padding-top: 1vh;
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
@@ -237,7 +237,7 @@
   z-index: 7;
   height: 8vh;
   width: 25vw;
-  top: 207vh;
+  top: 211vh;
   left: 39vw;
   padding: 0 3vw 0 2vw;
   flex-direction: row;
