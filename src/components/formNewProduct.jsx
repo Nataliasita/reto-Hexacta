@@ -2,19 +2,12 @@ import React, { useState, useRef } from "react";
 import "../estilos/formNewProducts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-<<<<<<< HEAD
 import { db } from "../firebase";
 import { collection, addDoc } from 'firebase/firestore/lite';
-import { Notificacion } from "./notificacion"
-
-export function Form(props) {
-=======
-// import {useModal} from '../components/useModal'
+import { Notificacion } from "./notificacion";
 import ProcessingImg from "./ProcessingImg";
 
-
-export function Form() {
->>>>>>> origin/reconstruccionImagen
+export function Form(props) {
   const [link, setLink] = useState("");
   const [imageFile, setImageFile] = useState("");
   const [title, setTitle] = useState("");
@@ -28,13 +21,8 @@ export function Form() {
   const [classDrag, setClassDrag] = useState("drag_image");
   const [btnDisable, setBtnDisable] = useState(true);
   const [image, setImage] = useState(null);
-<<<<<<< HEAD
   const [message, setMessage] = useState(false);
  
-=======
-  //const [file, setFile] = useState(null);
-
->>>>>>> origin/reconstruccionImagen
   const refInputFile = useRef(null);
 
   //PARA AGREGAR NUEVO PRODUCTO A FIREBASE
