@@ -10,8 +10,10 @@ import log1 from '../images/log1.png'
 import log2 from '../images/log2.png'
 import log3 from '../images/log3.png'
 import video_d from '../images/deporte.mp4'
-
-
+import celular from '../images/celu.jpg'
+import deporte from '../images/deporte.jpg'
+import compu from '../images/compu.jpg'
+import viaje from '../images/viaje.jpg'
 
 export function Home() {
     return (
@@ -23,10 +25,20 @@ export function Home() {
             </video>
                      <p className="title1">Acumula puntos y disfruta la aventura...</p>
                 
-                <img src={mascota} className="lectura" alt="" />
-                     <p className="title2">Mascotas</p>
+                
                 <img src={bolso} className="bolso1" alt="" />
                      <p className="title3">Accesorios</p>
+                <img src={celular} className="celular1" alt="" />
+                     <p className="title5">Celulares</p>
+                <img src={deporte} className="deportes" alt="" />
+                     <p className="title6">Deportes</p>
+
+                <img src={mascota} className="mascota" alt="" />
+                    <p className="title2">Mascotas</p>
+                <img src={compu} className="compu" alt="" />
+                    <p className="title7">Tecnologia</p>
+                <img src={viaje} className="viaje" alt="" />
+                    <p className="title8">Viajes</p>
 
               <div className="redes">
                 <p className="title4">Encuentranos en :</p>

@@ -10,18 +10,32 @@
     width: 100vw;
     display: flex;
     margin-top:14.3vh;
-    padding-left: 71vw;
+    padding-left: 65.5vw;
     font-size: 1.5em;
     cursor: pointer;
     text-decoration: none !important;
+
 }
 a{
     list-style: none;
     text-decoration: none !important;
     color: #FFFFFF;
+    padding-left: 1vw;
 }
 .main1{
-    right: 2vw;
+    left: 4vw;
+   height: 5vh;
+   width: auto;
+}
+.main2{
+    right: 3vw;
+    position: absolute;
+}
+.carro{
+    position: absolute;
+    height: 6vh;
+    top: 18vh;
+    right: 9vw;
 }
 .logoH{
     height: 10vh;

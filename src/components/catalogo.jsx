@@ -1,3 +1,4 @@
+/* eslint-disable no-unreachable */
 import React, {useState, useEffect} from 'react'
 import MyHeader from './header'
 import '../estilos/home.css'
@@ -13,25 +14,43 @@ import { ButtonModal } from './buttonModal';
 
 function searchingTerm(term){ 
   return function(x){ 
-    return x.title.toLowerCase().includes(term) || !term;
+    return x.title.toLowerCase().includes(term) || x.categories.toLowerCase().includes(term)|| !term ;
    }
+}
 
- }
+  // const searchHandler = (searchTerm) => {
+  //   setSearchTerm(searchTerm);
+  //   if (searchTerm !== "") {
+  //     const newProductList = productos.filter((producto) => {
+  //       return Object.values(producto)
+  //         .join(" ")
+  //         .toLowerCase()
+  //         .includes(searchTerm.toLowerCase());
+  //     });
+  //     setSearchResults(newProductList);
+  //   } else {
+  //     setSearchResults(productos);
+  //   }
+  // };
 
 
-export function Catalogo() {
-
-  // async function getCities(db) {
-  //   const citiesCol = collection(db, 'cities');
-  //   const citySnapshot = await getDocs(citiesCol);
-  //   const cityList = citySnapshot.docs.map(doc => doc.data());
-  //   return cityList;
-  // }
+export function Catalogo(props) {
 
   const [productos, setProductos] = useState([]);
-  const [term, setTerm] = React.useState('');
+  const [term, setTerm] = React.useState();
+  const [selectedCategory, setSelectedCategory] = useState({
+    checked:null
+  })
   const [reload, setReload] = React.useState(true);
 
+  const handleChange = e =>{
+    const newTerm=setTerm(e.target.value);
+    setSelectedCategory({
+
+       checked:(e.target.value)
+    })
+  }
+  
   useEffect(()=>{
     const dbCollection = collection(db, "Productos");
     getDocs(dbCollection).then((snapshot) => {
@@ -53,10 +72,10 @@ export function Catalogo() {
              <input className="buscar"
               onChange= {e => setTerm(e.target.value)} 
               name='term'
-              placeholder="Buscar producto" type="text"/>
+              placeholder="Buscar producto o categoria" type="text"/>
              
         </form>
-              <button className="button_buscar" type="submit">Buscar</button>
+
 
              <div className="products">
 
@@ -71,27 +90,51 @@ export function Catalogo() {
 
                <form  action="" className="op">
                       <label >
-                      <input type="radio" name="productos"  value="accesorios"/> 
+                      <input type="radio"
+                       name="productos"  
+                       value="accesorios"
+                       checked={selectedCategory.checked === "accesorios"}
+                       onChange={handleChange}/> 
                       Accesorios
                       </label> 
                       <label >
-                      <input type="radio" name="productos"  value="celulares"/> 
+                      <input type="radio"
+                       name="productos"  
+                       value="celulares"
+                       checked={selectedCategory.checked === "celulares"}
+                       onChange={handleChange}/>
                       Celulares
                       </label> 
                       <label >
-                      <input type="radio" name="productos"  value="deportes"/> 
+                      <input type="radio"
+                       name="productos" 
+                       value="deportes"
+                       checked={selectedCategory.checked === "deportes"}
+                       onChange={handleChange}/> 
                       Deportes
                       </label> 
                       <label >
-                      <input type="radio" name="productos"  value="mascotas"/> 
+                      <input type="radio"
+                       name="productos"  
+                       value="mascotas"
+                       checked={selectedCategory.checked === "mascotas"}
+                       onChange={handleChange}/> 
                       Mascotas
                       </label> 
                       <label >
-                      <input type="radio" name="productos"  value="tecnologia"/> 
+                      <input type="radio"
+                      name="productos"  
+                      value="tecnologia"
+                      checked={selectedCategory.checked === "tecnologia"}
+                      onChange={handleChange}/> 
                       Tecnologia
                       </label> 
                       <label >
-                      <input type="radio" name="productos"  value="viajes"/> 
+                      <input type="radio" 
+                      name="productos"  
+                      value="viajes"
+                      checked={selectedCategory.checked === "viajes"}
+                      onChange={handleChange}/>
                       Viajes
                       </label> 
                      

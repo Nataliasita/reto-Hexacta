@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import punto from '../images/punto.png'
 import idioma from '../images/idioma.png'
 import user from '../images/user.png'
+import carro from '../images/carrito.png'
 
 export function Header() {
     return (
@@ -32,7 +33,8 @@ export function Header() {
                     <ul className="main1">Catálogo</ul>
                 </Link>
                 <Link to = "/Carrito">
-                    <ul className="main1">Carrito</ul>
+                    <ul className="main2">Carrito</ul>
+                    <img src={carro} className="carro" alt="" />
                 </Link>
 
             </nav>
@@ -71,7 +73,8 @@ class MyHeader extends React.Component {
                     <ul className="main1">Catálogo</ul>
                 </Link>
                 <Link to = "/Carrito">
-                    <ul className="main1">Carrito</ul>
+                    <ul className="main2">Carrito</ul>
+                    <img src={carro} className="carro" alt="" />
                 </Link>
             </nav>
 
@@ -99,6 +102,7 @@ export class MyHeaderCar extends React.Component {
                      </div>
                      <div className="idioma">
                          <img src={idioma} className="point2" alt="" />
+                         
                          <p className="es">ES</p>
                      </div>  
 
@@ -110,7 +114,8 @@ export class MyHeaderCar extends React.Component {
                     <ul className="main1">Catálogo</ul>
                 </Link>
                 <Link to = "/Carrito">
-                    <ul className="main1">Carrito</ul>
+                    <ul className="main2">Carrito</ul>
+                    <img src={carro} className="carro" alt="" />
                 </Link>
             </nav>
 
