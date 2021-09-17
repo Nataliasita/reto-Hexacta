@@ -36,7 +36,7 @@ function searchingTerm(term){
 
 
 export function Catalogo(props) {
-
+ 
   const [productos, setProductos] = useState([]);
   const [nuevoProducto, setnuevoProducto] = useState([]);
   const [term, setTerm] = React.useState();
@@ -77,7 +77,6 @@ export function Catalogo(props) {
       })
   },[reload]);
 
-
   return (
     <div className="contain_catalogo">
       <MyHeader/>
@@ -91,7 +90,6 @@ export function Catalogo(props) {
              
         </form>
 
-
              <div className="products">
 
                {productos.filter(searchingTerm(term)).map((item) =>    
@@ -103,6 +101,8 @@ export function Catalogo(props) {
                <CardsNew {...item1}>                              
                </CardsNew>
                )}
+
+
              </div>
             
               <div className="filtro">
@@ -167,6 +167,11 @@ export function Catalogo(props) {
               <ButtonModal reload = {reload} setReload = {setReload} />
             </div>
 
+          
+
+
+
     </div>
+
   )
 }

@@ -3,5 +3,6 @@
     height: 24vh;
     width: 100vw;
     position: absolute;
-    margin-top:221vh
+    margin-top:221vh;
+    flex-direction: column;
 }

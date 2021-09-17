@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import { Header } from './header'
 import { Footer } from './footer'
 import '../estilos/home.css'
@@ -25,20 +26,33 @@ export function Home() {
             </video>
                      <p className="title1">Acumula puntos y disfruta la aventura...</p>
                 
+                <p className="bienvenida">Te compartimos algunas opciones para redimir tus puntos </p>
                 
-                <img src={bolso} className="bolso1" alt="" />
+                
+                <Link to="/Catalogo">
+                    <img src={bolso} className="bolso1" alt="" />
                      <p className="title3">Accesorios</p>
+                </Link>
+                <Link to="/Catalogo">
                 <img src={celular} className="celular1" alt="" />
                      <p className="title5">Celulares</p>
+                </Link>
+                <Link to="/Catalogo">
                 <img src={deporte} className="deportes" alt="" />
                      <p className="title6">Deportes</p>
-
+                </Link>
+                <Link to="/Catalogo">
                 <img src={mascota} className="mascota" alt="" />
                     <p className="title2">Mascotas</p>
+                </Link>   
+                <Link to="/Catalogo">    
                 <img src={compu} className="compu" alt="" />
                     <p className="title7">Tecnologia</p>
+                </Link>     
+                <Link to="/Catalogo">   
                 <img src={viaje} className="viaje" alt="" />
                     <p className="title8">Viajes</p>
+                    </Link> 
 
               <div className="redes">
                 <p className="title4">Encuentranos en :</p>

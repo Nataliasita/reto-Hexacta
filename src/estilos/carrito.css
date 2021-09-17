@@ -1,7 +1,139 @@
 .containt_car{
-    height: 180vh;
+    height: 120vh;
     width: 100vw;
     background: #FFFFFF;
     display: flex;
     overflow-x: hidden;
   }
+  
+.products1{
+  height: 68vh;
+  width: 81vw;
+  top:60vh;
+  left:9vw;
+  background: #f0f0f0;
+  position: absolute;
+  display: grid;
+  overflow-y: scroll;
+  padding-bottom:1vh;
+  padding-top: 1vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.3vh;
+  grid-row: auto;
+
+}
+.products1::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.products1::-webkit-scrollbar:vertical {
+  width:0.8vw;
+}
+
+.products1::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.products1::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+.products1::-webkit-scrollbar-thumb {
+  background-color: #3a3a3a;;
+  border-radius: 20px;
+}
+.products::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+.title_pedido{
+  position: absolute;
+  margin-top: 17vw;
+  left: 41vw;
+  font-size: 1.8em;
+  color: #3a3a3a;
+}
+.detalle_pro{
+  display: flex;
+  position: absolute;
+  height: 10vh;
+  width: 81vw;
+  top:50vh;
+  left: 9vw;
+  font-size: 1.1em;
+}
+.prod{
+  position: absolute;
+  left: 5vw;
+}
+.cant{
+  position: absolute;
+  left: 37vw;
+  width: 9vw;
+  text-align: center;
+}
+.ptsUnd{
+  position: absolute;
+  right: 19vw;
+  width: 9vw;
+  text-align: center;
+}
+.subtotal_puntos{
+  position: absolute;
+  right: 5vw;
+  width: 9vw;
+  top:-1.5vh;
+  text-align: center;
+}
+.totales{
+  width: 31vw;
+  height: 25vh;
+  position:absolute ;
+  top: 127vh;
+  right: 12vw;
+  padding-left: 2.5vw;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+}
+.cantidad_product{
+  position: absolute;
+  height: 7vh;
+  width: 31vw;
+  top: 0;
+  left: 0;
+  padding-left: 2.5vw;
+  padding-top: 1.2vh;
+}
+.sub_puntos{
+  position: absolute;
+  height: 7vh;
+  width: 31vw;
+  top: 7vh;
+  left: 0;
+  padding-left: 2.5vw;
+  padding-top: 1.2vh;
+  border-top: 1px #3a3a3a solid;
+  border-bottom:1px #3a3a3a solid;
+}
+.total_puntos{
+  position: absolute;
+  height: 8vh;
+  width:31vw;
+  top: 13.6vh;
+  left: 0;
+  padding-left: 2.5vw;
+  padding-top: 1.5vh;
+  font-weight: bolder;
+  font-size: 1.15em;
+}
+.btn_pagar{
+  top:156vh;
+  right: 9vw;
+  width: 19vw;
+  height: 8vh;
+  position: absolute;
+  background-color: #008b35;
+  color: #FFFFFF;
+  font-size: 1.1em;
+  font-weight: bolder;
+}

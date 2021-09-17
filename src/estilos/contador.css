@@ -1,0 +1,28 @@
+.contador_global{
+    width: 10vw;
+    height: 4vh;
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    top: 10vh;
+    left: -16vw;
+}
+.suma{
+    display: flex;
+    margin-right: 1vw;
+ 
+}
+.cantidad{
+    display: flex;
+    
+    position: relative;
+    height: 2vh;
+    width: 1vw;
+    top:-2vh
+
+}
+.resta{
+    display: flex;
+    margin-left: 1vw;
+}
