@@ -3,7 +3,8 @@ import "../estilos/formNewProducts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import {useModal} from '../components/useModal'
-import ProcessingImg from './ProcessingImg'
+import ProcessingImg from "./ProcessingImg";
+
 
 export function Form() {
   const [link, setLink] = useState("");
@@ -216,7 +217,8 @@ export function Form() {
               onClick={selectImage}
             >
               <img width="200px" height="200px" src={image} alt="" />
-              <ProcessingImg image={image} />
+              {image && <ProcessingImg image={image} />}
+              {/* <ProcessingImg /> */}
             </div>
           </div>
 
