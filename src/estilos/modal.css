@@ -14,15 +14,13 @@
   .modal-container {
     position: absolute;
     padding: 1rem;
-    min-width: 620px;
-    max-width: 780px;
-    min-height: 500px;
-    max-height: 800px;
+    width: 80%;
+    height: 95%;
     overflow-y: auto;
     background-color: #ffff;
     border-radius: 10px;
     justify-content: center;
-    
+    display: flex;
   }
   
   .modal-close {

@@ -4,9 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../firebase";
 import { collection, addDoc } from 'firebase/firestore/lite';
-import { Notificacion } from "./notificacion"
+import { Notificacion } from "./notificacion";
 import ProcessingImg from "./ProcessingImg";
-
 
 export function Form(props) {
   const [link, setLink] = useState("");
@@ -221,16 +220,12 @@ export function Form(props) {
               onDrop={addImage}
               required
             />
-            {/* <button
-              className="FontAwesomeBtn"
-              id="imageFile"
-              style={{ fontSize: "24px", color: "white" }}
-            >
-              <FontAwesomeIcon icon={faSearch} />
-            </button> */}
             {errors.imageFile && <p className="errores">{errors.imageFile}</p>}
           </div>
-
+          <div className= "divSpinner">
+            {!imageFile == '' && !image ? <div className= 'spinner'/> : ''}
+          </div>
+          
           <div className="contentForm">
             <div
               className={classDrag}

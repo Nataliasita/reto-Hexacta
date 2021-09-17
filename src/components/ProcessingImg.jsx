@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react'
+import "../estilos/processingImg.css";
 
 const ProcessingImg = ({ image }) => {
 
@@ -43,7 +44,7 @@ const ProcessingImg = ({ image }) => {
     }, [image])
 
     return (
-        <div>
+        <div className= "containerProcessingImage">
             <div>
                 <h3>Imagen original</h3>
                <canvas ref={canvasEl}></canvas> 
