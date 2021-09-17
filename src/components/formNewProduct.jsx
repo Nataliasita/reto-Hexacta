@@ -2,9 +2,11 @@ import React, { useState, useRef } from "react";
 import "../estilos/formNewProducts.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-// import {useModal} from '../components/useModal'
+import { db } from "../firebase";
+import { collection, addDoc } from 'firebase/firestore/lite';
+import { Notificacion } from "./notificacion"
 
-export function Form({ children }) {
+export function Form(props) {
   const [link, setLink] = useState("");
   const [imageFile, setImageFile] = useState("");
   const [title, setTitle] = useState("");
@@ -18,15 +20,33 @@ export function Form({ children }) {
   const [classDrag, setClassDrag] = useState("drag_image");
   const [btnDisable, setBtnDisable] = useState(true);
   const [image, setImage] = useState(null);
-  const [file, setFile] = useState(null);
-
+  const [message, setMessage] = useState(false);
+ 
   const refInputFile = useRef(null);
+
+  //PARA AGREGAR NUEVO PRODUCTO A FIREBASE
+  const addNewProduct = (selectCatg, link, image, title) => {
+    const form={
+          categories: selectCatg,
+          description: link,
+          image: image,
+          points: null,
+          title: title,
+          newImage: null,
+          imageWidth: null,
+          imageHeight: null,
+          imageArray: null,
+        }
+
+    const dbCollection = collection(db, "nuevoProducto");
+    addDoc(dbCollection,form).then((resp) => {
+    })
+  }  
 
   //EXPRESIONES REGULARES PARA VALIDAR EL FORMULARIO
   const expresiones = {
     link: /^(ftp|http|https):\/\/[^ "]+$/, // Comprueba ftp, http, https, requiere www y comprueba cualquier número de caracteres válidos.
     imageFile: /(.jpg|.jpeg|.png|.gif)$/i, // Validar la extension del archivo jpg, jpeg, png, gif
-    title: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   };
 
   //FUNCION PARA VALIDAR LINKS
@@ -38,19 +58,19 @@ export function Form({ children }) {
       //VALIDAR SI EL LINK TERMINA EN EXE
       let validarExe = e.target.value.endsWith(".exe");
       if (validar && !validarExe) {
-        setErrors({ ...errors, link: "" });
+        setErrors({ ...errors, link: "", linkClass: "valid_form"});
       } else {
         if (validarExe) {
-          setErrors({ ...errors, link: "El link contiene un ejecutable .EXE" });
+          setErrors({ ...errors, link: "El link contiene un ejecutable .EXE", linkClass: "error_form" });
           setBtnDisable(true);
         } else {
-          setErrors({ ...errors, link: "El link no es válido" });
+          setErrors({ ...errors, link: "El link no es válido", linkClass: "error_form" });
           setBtnDisable(true);
         }
       }
     } else {
       setLink("");
-      setErrors({ ...errors, link: "" });
+      setErrors({ ...errors, link: "", linkClass: "valid_form" });
     }
     validateButton();
   };
@@ -60,12 +80,13 @@ export function Form({ children }) {
     setImageFile(e.target.value);
     let validar = expresiones.imageFile.test(e.target.value);
     if (validar) {
-      setErrors({ ...errors, imageFile: "" });
+      setErrors({ ...errors, imageFile: "", imageFileClass:"valid_form"});
     } else {
       setErrors({
         ...errors,
         imageFile:
           "La extensión no es válida, el formato debe ser jpg, jpeg, png y gif",
+          imageFileClass:"error_form"
       });
       setBtnDisable(true);
     }
@@ -76,22 +97,12 @@ export function Form({ children }) {
 
   //FUNCION PARA VALIDAR TITLE
   const onChangeTitle = (e) => {
-    if (e.target.value.length > 0) {
-      setTitle(e.target.value);
-      let validar = expresiones.title.test(e.target.value);
-      if (validar) {
-        setErrors({ ...errors, title: "" });
-      } else {
-        setLink("");
-        setErrors({
-          ...errors,
-          title: "No esta permitido usar números y caracteres especiales",
-        });
-        setBtnDisable(true);
-      }
+    setTitle(e.target.value);
+    if (e.target.value === "") {
+      setErrors({ ...errors, title: "El campo 'título' es requerido",titleClass:"error_form" });
+      setBtnDisable(true);
     } else {
-      setLink("");
-      setErrors({ ...errors, link: "" });
+      setErrors({ ...errors, title: "",titleClass:"valid_form"});
     }
     validateButton();
   };
@@ -100,17 +111,17 @@ export function Form({ children }) {
   const onChangeSelect = (e) => {
     setSelectCatg(e.target.value);
     if (e.target.value === "") {
-      setErrors({ ...errors, selectCatg: "Debe selecccionar una categoría" });
+      setErrors({ ...errors, selectCatg: "Debe selecccionar una categoría", selectCatgClass:"error_form" });
       setBtnDisable(true);
     } else {
-      setErrors({ ...errors, selectCatg: "" });
+      setErrors({ ...errors, selectCatg: "",selectCatgClass:"valid_form" });
     }
     validateButton();
   };
 
   //FUNCION VALIDAR BOTON SUBMIT
   const validateButton = () => {
-    if (!link && !imageFile && !title && !selectCatg) {
+    if (!errors) {
       setBtnDisable(true);
     } else {
       setBtnDisable(false);
@@ -120,7 +131,13 @@ export function Form({ children }) {
   //FUNCION PARA BOTON SUBMIT
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("le diste click");
+    addNewProduct(selectCatg, link, image, title);
+    setMessage(true);
+    setTimeout(()=>{
+      setMessage(false);
+      props.closeModal()
+      props.setReload(!props.reload)
+    },3000)
   };
 
   //PARA LAS OPCIONES DE LAS CATEGORIAS DEL SELECT
@@ -146,7 +163,6 @@ export function Form({ children }) {
     fileReader.addEventListener("load", (e) => {
       setImage(e.target.result);
     });
-    // setFile(file)
   };
 
   const addImage = (e) => {
@@ -157,15 +173,17 @@ export function Form({ children }) {
 
     showImage(file);
   };
-
+  
   return (
     <>
       <form action="" className="conteinerForm" onSubmit={handleSubmit}>
         <div className="form">
           <div className="contentForm">
-            <label className='lb_form' htmlFor="link">Enlace al sitio:</label>
+            <label className="lb_form" htmlFor="link">
+              Enlace al sitio:
+            </label>
             <input
-              className='int_form'
+              className= {`int_form ${errors.linkClass}`}
               type="text"
               name="link"
               value={link}
@@ -178,9 +196,11 @@ export function Form({ children }) {
           </div>
 
           <div className="contentForm">
-            <label className='lb_form' htmlFor="imageFile">Imagen:</label>
+            <label className="lb_form" htmlFor="imageFile">
+              Imagen:
+            </label>
             <input
-              className='int_form'
+              className={`int_form ${errors.imageFileClass}`}
               ref={refInputFile}
               type="file"
               name="imageFile"
@@ -190,15 +210,16 @@ export function Form({ children }) {
               onDrop={addImage}
               required
             />
-            <button
+            {/* <button
               className="FontAwesomeBtn"
               id="imageFile"
               style={{ fontSize: "24px", color: "white" }}
             >
               <FontAwesomeIcon icon={faSearch} />
-            </button>
+            </button> */}
             {errors.imageFile && <p className="errores">{errors.imageFile}</p>}
           </div>
+
           <div className="contentForm">
             <div
               className={classDrag}
@@ -219,15 +240,15 @@ export function Form({ children }) {
           </div>
 
           <div className="contentForm">
-            <label  htmlFor="title">Titulo:</label>
+            <label htmlFor="title" className="lb_form">Título:</label>
             <input
-              className="formControl"
+              className={`int_form ${errors.titleClass}`}
               type="text"
               name="title"
               value={title}
               onChange={onChangeTitle}
               id="title"
-              placeholder="Ingrese titulo del producto"
+              placeholder="Ingrese título del producto"
               required
             ></input>
             {errors.title.length > 0 && (
@@ -235,9 +256,10 @@ export function Form({ children }) {
             )}
           </div>
 
-          <div className="contentForm">
-            <label htmlFor="select">Categoría: </label>
+          <div className="contentForm selectCatg">
+            <label htmlFor="select" className="lb_form">Categoría: </label>
             <select
+              className={`int_form ${errors.selectCatgClass}`}
               name="select"
               id="select"
               value={selectCatg}
@@ -246,7 +268,7 @@ export function Form({ children }) {
             >
               <option value="">Selecciona una categoría</option>
               {valueOptions.map((item, key) => {
-                return <option value={key}>{item} </option>;
+                return <option key={key} value={item}>{item} </option>;
               })}
             </select>
             {errors.selectCatg && (
@@ -255,16 +277,18 @@ export function Form({ children }) {
           </div>
         </div>
 
+
         <div className="modal-footer">
           <button type="reset" className="btn2">
             Reiniciar
           </button>
-          
+
           <button type="submit" className="btn2" disabled={btnDisable}>
             Agregar
           </button>
         </div>
       </form>
+      {message && <Notificacion/>}
     </>
   );
 }

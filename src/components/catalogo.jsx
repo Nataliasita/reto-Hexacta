@@ -30,6 +30,7 @@ export function Catalogo() {
 
   const [productos, setProductos] = useState([]);
   const [term, setTerm] = React.useState('');
+  const [reload, setReload] = React.useState(true);
 
   useEffect(()=>{
     const dbCollection = collection(db, "Productos");
@@ -41,7 +42,7 @@ export function Catalogo() {
         console.log(data)
         setProductos(data)
       })
-  },[]);
+  },[reload]);
 
   return (
     <div className="contain_catalogo">
@@ -99,7 +100,9 @@ export function Catalogo() {
               </div>
 
 
-            <div className='dimension_btn'><ButtonModal /></div>
+            <div className='dimension_btn'>
+              <ButtonModal reload = {reload} setReload = {setReload} />
+            </div>
 
     </div>
   )

@@ -16,6 +16,7 @@
 .contentForm{
   width: 100%;
 }
+
 .lb_form{
   width: 25%;
   float: left;
@@ -26,11 +27,19 @@
 
 .int_form{
   width: 74%;
-  border: 0.1rem solid #ad0000;
   font-size: 1rem;
   margin-top: 1rem;
   padding: 0.5rem;
 }
+
+.error_form{
+  border: 0.1rem solid #ad0000;
+}
+
+.valid_form{
+  border: 0.1rem solid #08a62c;
+}
+
 
 .FontAwesomeBtn{
   background: #ad0000;
