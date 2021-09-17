@@ -132,6 +132,7 @@ export function Form(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     addNewProduct(selectCatg, link, image, title);
+    reset();
     setMessage(true);
     setTimeout(()=>{
       setMessage(false);
@@ -139,6 +140,14 @@ export function Form(props) {
       props.setReload(!props.reload)
     },3000)
   };
+
+  //PARA RESETEAR EL FORM
+  const reset=()=>{
+    setLink("");
+    setImageFile("");
+    setTitle("");
+    setSelectCatg("");
+  }
 
   //PARA LAS OPCIONES DE LAS CATEGORIAS DEL SELECT
   const valueOptions = [
@@ -279,7 +288,7 @@ export function Form(props) {
 
 
         <div className="modal-footer">
-          <button type="reset" className="btn2">
+          <button type="button" className="btn2" onClick={reset}>
             Reiniciar
           </button>
 
