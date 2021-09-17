@@ -263,3 +263,16 @@
 .log:hover{
   cursor: pointer;
 }
+.bienvenida{
+  top: 89vh;
+  height: 8vh;
+  width: 55vw;
+  color:rgb(46, 46, 46);
+  position: absolute;
+  left: 4vw;
+  padding: 1.5vh;
+  font-size: 1.3em;
+  font-weight: bolder;
+  border-bottom: 3px  outset rgba(167, 167, 167, 0.664);;
+  padding-left: 0;
+}
