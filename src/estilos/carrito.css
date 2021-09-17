@@ -1,5 +1,5 @@
 .containt_car{
-    height: 140vh;
+    height: 120vh;
     width: 100vw;
     background: #FFFFFF;
     display: flex;
@@ -35,7 +35,7 @@
 } 
 
 .products1::-webkit-scrollbar:horizontal {
-  height: 4vh;
+  display: none;
 }
 
 .products1::-webkit-scrollbar-thumb {

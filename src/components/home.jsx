@@ -26,7 +26,7 @@ export function Home() {
             </video>
                      <p className="title1">Acumula puntos y disfruta la aventura...</p>
                 
-                <p className="bienvenida">Te mostramos algunas de las opciones que tienes para usar tus puntos </p>
+                <p className="bienvenida">Te compartimos algunas opciones para redimir tus puntos </p>
                 
                 
                 <Link to="/Catalogo">

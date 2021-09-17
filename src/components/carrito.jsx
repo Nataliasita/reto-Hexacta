@@ -1,6 +1,7 @@
 import React from 'react'
 import  {MyHeaderCar} from './header'
 import { Footer } from './footer'
+import{ProductCar} from './productCar'
 import '../estilos/home.css'
 import '../estilos/footer.css'
 import '../estilos/header.css'
@@ -25,7 +26,7 @@ export function Carrito() {
 
 
                     <div className="products1">
-
+                        <ProductCar></ProductCar>
 
                     </div>
                     
