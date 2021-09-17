@@ -14,22 +14,104 @@
     background-size: cover;
     display: none;
 }
-.lectura{
-    width: 21vw;
-    height: 45vh;
+.mascota{
+    width: 20vw;
+    height: 42vh;
     display: flex;
-    right: 12vw;
+    left: 10vw;
     position: absolute;
-    top:101vh;
+    top:162vh;
     border-radius: 1000px;
     z-index: 5;
     transform: rotate(-5deg);
     box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
 }
-.lectura:hover{
+.mascota:hover{
   cursor: pointer;
-  top:99vh;
-  right: 11vw;
+  left: 10vw;
+  top: 160vh;
+}
+.celular1{
+  width: 20vw;
+  height: 42vh;
+  display: flex;
+  right: 39.3vw;
+  position: absolute;
+  top:108vh;
+  border-radius: 1000px;
+  z-index: 5;
+  transform: rotate(-5deg);
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.celular1:hover{
+  cursor: pointer;
+  right: 39.3vw;
+  top: 106vh;
+}
+.deportes{
+  width: 20vw;
+  height: 42vh;
+  display: flex;
+  right: 10vw;
+  position: absolute;
+  top:108vh;
+  border-radius: 1000px;
+  z-index: 5;
+  transform: rotate(-5deg);
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.deportes:hover{
+  cursor: pointer;
+  right: 10vw;
+  top: 106vh;
+}
+.title6{
+  position: absolute;
+  color: #ffffff;
+  top:139vh;
+  right: 11.5vw;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_red.jpg);
+  text-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.compu{
+  width: 20vw;
+  height: 42vh;
+  display: flex;
+  right: 39.3vw;
+  position: absolute;
+  top:162vh;
+  border-radius: 1000px;
+  z-index: 5;
+  transform: rotate(-5deg);
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.compu:hover{
+  cursor: pointer;
+  right: 39.3vw;
+  top: 160vh;
+}
+.viaje{
+  width: 20vw;
+  height: 42vh;
+  display: flex;
+  right: 10vw;
+  position: absolute;
+  top:162vh;
+  border-radius: 1000px;
+  z-index: 5;
+  transform: rotate(-5deg);
+  box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
+}
+.viaje:hover{
+  cursor: pointer;
+  right: 10vw;
+  top: 160vh;
 }
 .vd1{
   height: 124vh;
@@ -57,18 +139,17 @@
 }
 .bolso1{
   position:absolute;
-  top: 101vh;
-  height: 45vh;
-  left: 17vw;
-  width: 21vw;
+  top: 108vh;
+  height: 42vh;
+  left: 10vw;
+  width: 20vw;
   border-radius: 1000px;
   box-shadow: 5px 2px 15px rgba(0, 0, 0, 0.7);
 }
 .bolso1:hover{
   cursor: pointer;
-  left: 18vw;
-  top: 99vh;
-
+  left: 10vw;
+  top: 106vh;
 }
 .title1{
   position: absolute;
@@ -78,11 +159,25 @@
   z-index: 6;
   font-size: 3em;
 }
+.title5{
+  position: absolute;
+  color: #ffffff;
+  top:139vh;
+  right: 40.8vw;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_red.jpg);
+  text-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
 .title2{
   position: absolute;
   color: #ffffff;
-  top:135vh;
-  right: 14vw;
+  top:193vh;
+  left: 11.5vw;
   font-size: 1.3em;
   z-index: 6;
   height: 7vh;
@@ -96,8 +191,8 @@
 .title3{
   position: absolute;
   color: #ffffff;
-  left: 19vw;
-  top:135vh;
+  left: 11.5vw;
+  top:139vh;
   font-size: 1.3em;
   z-index: 6;
   height: 7vh;
@@ -106,6 +201,34 @@
   background-size: contain;
   text-align: center;
   vertical-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.title7{
+  position: absolute;
+  color: #ffffff;
+  top:193vh;
+  right: 40.8vw;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_red.jpg);
+  text-align: center;
+  padding-top: 1vh;
+  box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.title8{
+  position: absolute;
+  color: #ffffff;
+  top:193vh;
+  right: 11.5vw;
+  font-size: 1.3em;
+  z-index: 6;
+  height: 7vh;
+  width: 17vw;
+  background-image: url(/src/images/fn_red.jpg);
+  text-align: center;
   padding-top: 1vh;
   box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.7);
 }
