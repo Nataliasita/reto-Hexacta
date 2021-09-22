@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import "../estilos/formNewProducts.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+//import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+//import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { db } from "../firebase";
 import { collection, addDoc } from 'firebase/firestore/lite';
 import { Notificacion } from "./notificacion";
@@ -223,7 +223,7 @@ export function Form(props) {
             {errors.imageFile && <p className="errores">{errors.imageFile}</p>}
           </div>
           <div className= "divSpinner">
-            {!imageFile == '' && !image ? <div className= 'spinner'/> : ''}
+            {!imageFile === '' && !image ? <div className= 'spinner'/> : ''}
           </div>
           
           <div className="contentForm">
