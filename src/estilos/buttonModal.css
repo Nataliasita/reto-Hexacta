@@ -13,6 +13,16 @@
     height: 8vh;
     margin-right: 0.5vw;
 }
+.label_btn2{
+    padding-top: 1vh;
+    color: #027789;
+    width: 12vw;
+    height: 8vh;
+    margin-right: 0.5vw;
+    font-size: 0.85em;
+    font-style:italic;
+}
+
 .btn_sug{
     width: 13vw;
     height: 15vh;
@@ -26,6 +36,7 @@
     margin-top:3vh;
     color: #027789;
     border: 2px #027789 inset;
+    font-weight: 600;
 }
 .btn_sug:hover{
     cursor: pointer;

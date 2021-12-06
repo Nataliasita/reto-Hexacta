@@ -25,7 +25,7 @@
 }
 
 .products::-webkit-scrollbar:vertical {
-    width:0.8vw;
+    width:0.5vw;
 }
 
 .products::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
@@ -123,6 +123,44 @@ input[type="radio"] {
     transform: scale(1.4);
     margin-right: 1vw;
 }
+.help{
+    width: 15vw;
+    height: 13vh;
+    top:110vh;
+    position: absolute;
+    padding: 1vh 1vw;
+    left: 0;
+    background-color: #027789;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn_help{
+    width: 13.5vw;
+    height: 13vh;
+    position: absolute;
+    margin: 0;
+    left: 0.7vw;
+    border: 0;
+    top: 0;
+    color: #027789;
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.asesor_help{
+    height: 6vh;
+    margin-right: 0.9vw;
+    margin-left:0.5vw;
+}
+.help:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+.btn_help:hover{
+    cursor: pointer;
+    box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+}
+
 .dimension_btn {
     width: 15vw;
     height: 30vh;

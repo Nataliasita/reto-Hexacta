@@ -11,6 +11,8 @@ export function ButtonModal(props) {
     return (
         <div className="btn_product_sug">
             <label className='label_btn' htmlFor="">¿No encontraste el producto que buscabas?</label>
+            <br/>
+            <label className='label_btn2' htmlFor="">Ahora puedes sugerirlo</label>
             <button className='btn_sug'type='button' onClick={openModal1}>Sugerir Producto</button>
             <Modal isOpen={isOpenModal1} closeModal1={closeModal1} className= "modalsugerido">
                 <Form reload = {props.reload} setReload = {props.setReload}  closeModal={closeModal1}/> 

@@ -1,5 +1,5 @@
 /* eslint-disable no-unreachable */
-import React from 'react'
+import React, { useState} from 'react'
 import MyHeader from './header'
 import '../estilos/home.css'
 import '../estilos/footer.css'
@@ -9,14 +9,15 @@ import '../estilos/buttonModal.css'
 import {Cards} from './cards'
 // import {CardsNew} from './cards2'
 import lupa from '../images/lupa.png'
+import asesor from '../images/atencion.png'
 // import { db } from '../firebase'
 // import { collection, getDocs } from 'firebase/firestore/lite';
 import { ButtonModal } from './buttonModal';
-// import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import products from "../data/catalogo.js";
 
-const information_products=products;
-console.log(information_products);
+// const information_products=products;
+// console.log(information_products);
 
 
 // function searchingTerm(term){ 
@@ -188,28 +189,28 @@ function searchingTerm(term){
   }
 }
 
-// function useQuery() {
-//     return new URLSearchParams(useLocation().search);
-// }
+function useQuery() {
+    return new URLSearchParams(useLocation().search);
+}
 
 export function Catalogo() {
   const information_products=products;
-  console.log(information_products);
-  // let query = useQuery();
+  // console.log(information_products);
+  let query = useQuery();
   // const [productos, setProductos] = useState([]);
   // const [nuevoProducto, setnuevoProducto] = useState([]);
-  const [term, setTerm] = React.useState([]);
-  // const [selectedCategory, setSelectedCategory] = useState({
-  //   checked: query.get('category') || null
-  // })
+  const [term, setTerm] = React.useState(() => query.get('category') || null);
+  const [selectedCategory, setSelectedCategory] = useState({
+    checked: query.get('category') || null
+  })
   // const [reload, setReload] = React.useState(true);
 
-  // const handleChange = e => {
-  //   setTerm(e.target.value);
-  //   setSelectedCategory({
-  //      checked: e.target.value
-  //   })
-  // }
+  const handleChange = e => {
+    setTerm(e.target.value);
+    setSelectedCategory({
+       checked: e.target.value
+    })
+  }
   
   // useEffect(()=>{
   //   const dbCollection = collection(db, "Productos");
@@ -266,44 +267,63 @@ export function Catalogo() {
                       <input type="radio"
                        name="productos"  
                        value="todas"
-                       checked={true}
+                       checked={selectedCategory.checked === "todas"}
+                       onChange={handleChange}
                        /> 
                       Todas
                       </label> 
                       <label >
                       <input type="radio"
                        name="productos"  
-                       value="accesorios"/> 
+                       value="accesorios"
+                       checked={selectedCategory.checked === "accesorios"}
+                       onChange={handleChange}
+                       /> 
                       Accesorios
                       </label> 
                       <label >
                       <input type="radio"
                        name="productos"  
-                       value="celulares"/>
+                       value="celulares"
+                       checked={selectedCategory.checked === "celulares"}
+                       onChange={handleChange}
+                       />
                       Celulares
                       </label> 
                       <label >
                       <input type="radio"
                        name="productos" 
-                       value="deportes"/> 
+                       value="deportes"
+                       checked={selectedCategory.checked === "deportes"}
+                       onChange={handleChange}
+                       /> 
                       Deportes
                       </label> 
                       <label >
                       <input type="radio"
                        name="productos"  
-                       value="mascotas"/> 
+                       value="mascotas"
+                       checked={selectedCategory.checked === "mascotas"}
+                       onChange={handleChange}
+                       /> 
                       Mascotas
                       </label> 
                       <label >
                       <input type="radio"
                       name="productos"  
-                      value="tecnologia"/> 
+                      value="tecnologia"
+                      checked={selectedCategory.checked === "tecnologia"}
+                      onChange={handleChange}
+                      /> 
                       Tecnologia
                       </label> 
                       <label >
                       <input type="radio" 
                       name="productos"  
-                      value="viajes"/>
+                      value="viajes"
+                      checked={selectedCategory.checked === "viajes"}
+                      onChange={handleChange}
+                      />
                       Viajes
                       </label> 
                      
@@ -311,6 +331,10 @@ export function Catalogo() {
 
               </div>
 
+            <div className='help'>
+            <button type="button" className='btn_help'><img className='asesor_help' src={asesor} alt="" />Necesitas Ayuda</button>    
+            </div>
+            
 
             <div className='dimension_btn'>
               <ButtonModal/>
