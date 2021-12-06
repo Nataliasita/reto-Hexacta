@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/reto-Hexacta/static/css/main.befd339f.chunk.css",
-    "main.js": "/reto-Hexacta/static/js/main.4fe8311a.chunk.js",
-    "main.js.map": "/reto-Hexacta/static/js/main.4fe8311a.chunk.js.map",
+    "main.js": "/reto-Hexacta/static/js/main.7294db05.chunk.js",
+    "main.js.map": "/reto-Hexacta/static/js/main.7294db05.chunk.js.map",
     "runtime-main.js": "/reto-Hexacta/static/js/runtime-main.1eda228b.js",
     "runtime-main.js.map": "/reto-Hexacta/static/js/runtime-main.1eda228b.js.map",
-    "static/js/2.cee8f6ec.chunk.js": "/reto-Hexacta/static/js/2.cee8f6ec.chunk.js",
-    "static/js/2.cee8f6ec.chunk.js.map": "/reto-Hexacta/static/js/2.cee8f6ec.chunk.js.map",
+    "static/js/2.98e7f860.chunk.js": "/reto-Hexacta/static/js/2.98e7f860.chunk.js",
+    "static/js/2.98e7f860.chunk.js.map": "/reto-Hexacta/static/js/2.98e7f860.chunk.js.map",
     "static/js/3.80c14276.chunk.js": "/reto-Hexacta/static/js/3.80c14276.chunk.js",
     "static/js/3.80c14276.chunk.js.map": "/reto-Hexacta/static/js/3.80c14276.chunk.js.map",
     "index.html": "/reto-Hexacta/index.html",
     "static/css/main.befd339f.chunk.css.map": "/reto-Hexacta/static/css/main.befd339f.chunk.css.map",
-    "static/js/2.cee8f6ec.chunk.js.LICENSE.txt": "/reto-Hexacta/static/js/2.cee8f6ec.chunk.js.LICENSE.txt",
+    "static/js/2.98e7f860.chunk.js.LICENSE.txt": "/reto-Hexacta/static/js/2.98e7f860.chunk.js.LICENSE.txt",
     "static/media/atencion.44ae94b3.png": "/reto-Hexacta/static/media/atencion.44ae94b3.png",
     "static/media/bolso.e5121346.jpg": "/reto-Hexacta/static/media/bolso.e5121346.jpg",
     "static/media/celu.9e45561f.jpg": "/reto-Hexacta/static/media/celu.9e45561f.jpg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1eda228b.js",
-    "static/js/2.cee8f6ec.chunk.js",
+    "static/js/2.98e7f860.chunk.js",
     "static/css/main.befd339f.chunk.css",
-    "static/js/main.4fe8311a.chunk.js"
+    "static/js/main.7294db05.chunk.js"
   ]
 }
