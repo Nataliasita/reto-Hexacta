@@ -14,7 +14,7 @@ export function Header() {
 
                      <div className="global_points">
                          <img src={punto} className="point" alt="" />
-                         <p className="sumaP">Tus puntos 5360</p>
+                         <p className="sumaP">Tus puntos 15360</p>
                      </div>
                      <div className="user">
                          <img src={user} className="point1" alt="" />
@@ -94,7 +94,7 @@ export class MyHeaderCar extends React.Component {
 
                       <div className="global_points">
                          <img src={punto} className="point" alt="" />
-                         <p className="sumaP">Tus puntos 5360</p>
+                         <p className="sumaP">Tus puntos 15360</p>
                      </div>
                      <div className="user">
                          <img src={user} className="point1" alt="" />
