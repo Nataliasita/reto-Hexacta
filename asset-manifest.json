@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/reto-Hexacta/static/css/main.befd339f.chunk.css",
+    "main.js": "/reto-Hexacta/static/js/main.44dbed70.chunk.js",
+    "main.js.map": "/reto-Hexacta/static/js/main.44dbed70.chunk.js.map",
+    "runtime-main.js": "/reto-Hexacta/static/js/runtime-main.1eda228b.js",
+    "runtime-main.js.map": "/reto-Hexacta/static/js/runtime-main.1eda228b.js.map",
+    "static/js/2.c57efada.chunk.js": "/reto-Hexacta/static/js/2.c57efada.chunk.js",
+    "static/js/2.c57efada.chunk.js.map": "/reto-Hexacta/static/js/2.c57efada.chunk.js.map",
+    "static/js/3.80c14276.chunk.js": "/reto-Hexacta/static/js/3.80c14276.chunk.js",
+    "static/js/3.80c14276.chunk.js.map": "/reto-Hexacta/static/js/3.80c14276.chunk.js.map",
+    "index.html": "/reto-Hexacta/index.html",
+    "static/css/main.befd339f.chunk.css.map": "/reto-Hexacta/static/css/main.befd339f.chunk.css.map",
+    "static/js/2.c57efada.chunk.js.LICENSE.txt": "/reto-Hexacta/static/js/2.c57efada.chunk.js.LICENSE.txt",
+    "static/media/atencion.44ae94b3.png": "/reto-Hexacta/static/media/atencion.44ae94b3.png",
+    "static/media/bolso.e5121346.jpg": "/reto-Hexacta/static/media/bolso.e5121346.jpg",
+    "static/media/celu.9e45561f.jpg": "/reto-Hexacta/static/media/celu.9e45561f.jpg",
+    "static/media/compu.b43167cc.jpg": "/reto-Hexacta/static/media/compu.b43167cc.jpg",
+    "static/media/deporte.278396a7.mp4": "/reto-Hexacta/static/media/deporte.278396a7.mp4",
+    "static/media/deporte.8b900bc2.jpg": "/reto-Hexacta/static/media/deporte.8b900bc2.jpg",
+    "static/media/home.css": "/reto-Hexacta/static/media/fn_red.5dafcaf7.jpg",
+    "static/media/mascotas.8d771326.jpg": "/reto-Hexacta/static/media/mascotas.8d771326.jpg",
+    "static/media/viaje.11aa4549.jpg": "/reto-Hexacta/static/media/viaje.11aa4549.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1eda228b.js",
+    "static/js/2.c57efada.chunk.js",
+    "static/css/main.befd339f.chunk.css",
+    "static/js/main.44dbed70.chunk.js"
+  ]
+}
