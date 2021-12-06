@@ -6,12 +6,21 @@
     text-align: center;
     justify-content: center;
     top: 10vh;
-    left: -16vw;
+    left: -19vw;
 }
 .suma{
+    width: 3vw;
     display: flex;
     margin-right: 1vw;
- 
+    background-color: #027789;
+    color: #FFFFFF;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-size: 1.3em;
+}
+.suma:hover{
+    cursor: pointer;
 }
 .cantidad{
     display: flex;
@@ -19,10 +28,22 @@
     position: relative;
     height: 2vh;
     width: 1vw;
-    top:-2vh
+    top:-2.5vh;
+    left: 0.1vw;
 
 }
 .resta{
+    width: 3vw;
     display: flex;
     margin-left: 1vw;
+    background-color: #027789;
+    color: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    font-size: 1.3em;
+    padding-bottom: 0.8vh;
+}
+.resta:hover{
+    cursor: pointer;
 }

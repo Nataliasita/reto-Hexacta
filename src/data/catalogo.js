@@ -54,7 +54,7 @@ const products=[{
 {    
    "number": "5",  
     "title": "Juguetes para gato",
-    "description": "juguetes interactivos para tu gato",
+    "description": "Juguetes interactivos para tu gato",
     "warehouseAvailability": "In Stock.",
     "points": 1250,
     "image": [
@@ -103,7 +103,7 @@ const products=[{
 {    
    "number": "9",  
     "title": "Vuelo Bogota - Medellin",
-    "description": "viaje ida-regreso, 1 adulto",
+    "description": "Viaje ida-regreso, 1 adulto",
     "warehouseAvailability": "In Stock.",
     "points": 4220,
     "image": [
@@ -127,7 +127,7 @@ const products=[{
 {    
    "number": "11",  
     "title": "Vuelo Bogota - Argentina",
-    "description": "trayecto ida-regreso, 1 adulto, desayuno incluido",
+    "description": "Trayecto ida-regreso, 1 adulto, desayuno incluido",
     "warehouseAvailability": "In Stock.",
     "points": 16000,
     "image": [

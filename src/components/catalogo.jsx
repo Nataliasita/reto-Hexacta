@@ -256,7 +256,6 @@ export function Catalogo() {
                </Cards>
                )}
 
-        
              </div>
             
               <div className="filtro">

@@ -1,14 +1,17 @@
 import React from 'react'
 import  {MyHeaderCar} from './header'
 import { Footer } from './footer'
-import{ProductCar} from './productCar'
+// import{ProductCar} from './productCar'
 import '../estilos/home.css'
 import '../estilos/footer.css'
 import '../estilos/header.css'
 import '../estilos/carrito.css'
+import { ProductCar } from './productCar'
+import products from "../data/catalogo.js";
 
 
 export function Carrito() {
+    const information_products=products;
     return (
         <div className="containt_car">
             <MyHeaderCar/>
@@ -19,18 +22,21 @@ export function Carrito() {
                       <p className="prod">Producto</p>
                       <p className="cant">Cantidad</p>
                       <p className="ptsUnd">Puntos x und</p>
-                      <p className="subtotal_puntos">Subtotal puntos und</p>
+                      <p className="subtotal_puntos">Subtotal puntos x und</p>
 
                  </div>
            
 
 
                     <div className="products1">
-                        <ProductCar></ProductCar>
-                        <ProductCar></ProductCar>
-                        <ProductCar></ProductCar>
-                        <ProductCar></ProductCar>
-                        <ProductCar></ProductCar>
+                        
+                    {information_products.map((item) => 
+                     <ProductCar {...item}>                              
+                     </ProductCar>
+                    )}
+               
+                       
+                     
                     </div>
                     
                     <div className="totales">

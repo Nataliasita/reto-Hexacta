@@ -4,8 +4,8 @@ import "../estilos/cards.css";
 // import products from "../data/catalogo.js";
 
 
-// const information_products=products
-// console.log(information_products)
+
+// console.log(information_products);
 
 
 

@@ -3,7 +3,7 @@ import '../estilos/contador.css'
 
 export function Contador() {
     // Declaración de una variable de estado que llamaremos "count"
-    const [count, setCount] = useState(0);
+    const [count, setCount] = useState(1);
   
     return (
       <div className="contador_global">

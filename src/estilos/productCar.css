@@ -1,7 +1,7 @@
 .productCar{
     width: 79vw;
     height: 25vh;
-    background: #e8fcf5;
+    background: #f6fffc;
     text-align: center;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
@@ -18,19 +18,19 @@
     margin-left: 2vw;
     margin-top: 4vh;
     border-top-right-radius:10px;
-    border-top-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 .card_title_car{
-    width: 16vw;
+    width: 19vw;
     height: 4vh;
     margin: 0;
     position: relative;
-    top:8vh;
+    top:7vh;
     left: 3vw;
     font-size: 1em;
     font-weight: bold;
     color: #3a3a3a;
-    padding: 0 0.7vw 0 0.7vw;
+    padding: 0 0.7vw 0.4vh 0.3vw;
     text-align: left;
 }
 .card_description_car{
@@ -38,36 +38,45 @@
     width: 16vw;
     height: 7vh;
     display: flex;
-    top:13vh;
-    left: -13vw;
+    top:11.8vh;
+    left: -15.8vw;
     position: relative;
     color: #464646;
-    padding: 0 1vw 0 1vw;
-    font-size: 0.95em;
+    padding: 0.1vw 0.1vw;
+    font-size: 0.8em;
     text-align: left;
 }
 .card_points_value_car{
     margin: 1vh 0  0.5vh 0;
     width: 8vw;
     height: 5vh;
-    left: 8.5vw;
+    left: 5vw;
     position: relative;
-    top: 8.3vh;
-    font-size: 1.2em;
+    top: 8.6vh;
+    font-size: 1.05em;
     color: #464646;
     text-align: center;
     padding-right: 0.5vw;
+    font-weight: 600;
 }
 .subtotal_product_car{
     margin: 1vh 0  0.5vh 0;
     width: 8vw;
     height: 5vh;
-    left: 5vw;
+    left:0;
     position: relative;
-    top: 8.3vh;
+    top: 8.5vh;
     font-size: 1.2em;
     color: #464646;
     text-align: center;
     padding-right: 0.5vw;
+}
+.papelera{
+    margin-top: 10.8vh;
+    height: 3vh;
+    margin-left: 1.5vw;
+}
+.papelera:hover{
+    cursor: pointer;
 
 }

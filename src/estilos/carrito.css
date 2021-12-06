@@ -1,7 +1,7 @@
 .containt_car{
     height: 120vh;
     width: 100vw;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     display: flex;
     overflow-x: hidden;
   }
@@ -11,7 +11,7 @@
   width: 81vw;
   top:60vh;
   left:9vw;
-  background: #f0f0f0;
+  background: #ffffff;
   position: absolute;
   display: grid;
   overflow-y: scroll;
@@ -27,7 +27,7 @@
 }
 
 .products1::-webkit-scrollbar:vertical {
-  width:0.8vw;
+  width:0.5vw;
 }
 
 .products1::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
@@ -39,7 +39,7 @@
 }
 
 .products1::-webkit-scrollbar-thumb {
-  background-color: #3a3a3a;;
+  background-color: #027789;
   border-radius: 20px;
 }
 .products::-webkit-scrollbar-track {
@@ -73,13 +73,13 @@
 }
 .ptsUnd{
   position: absolute;
-  right: 19vw;
+  right: 20vw;
   width: 9vw;
   text-align: center;
 }
 .subtotal_puntos{
   position: absolute;
-  right: 5vw;
+  right: 6.9vw;
   width: 9vw;
   top:-1.5vh;
   text-align: center;
